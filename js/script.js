@@ -37,6 +37,7 @@ window.onload = function () {
     loop: true,
     effect: 'fade',
     delay: 1000,
+    // spaceBetween: 50,
     navigation: {
       nextEl: '.swp-button-next-middle-banner',
       prevEl: '.swp-button-prev-middle-banner',
@@ -52,8 +53,13 @@ window.onload = function () {
       prevEl: '.swp-button-schedule-prev',
     },
   });
-  new Swiper('.swp-inhanewss-coop', {
-    loop: true, 
+  new Swiper('.swp-inhanews-coop', {
+    loop: true,
+    delay: 1500,
+    navigation: {
+      nextEl: '.swp-inhanews-coop-next',
+      prevEl: '.swp-inhanews-coop-prev',
+    },
   });
   
   $('.icon-pause').click(function () {
