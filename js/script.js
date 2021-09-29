@@ -1,7 +1,123 @@
-'use strict'
+'use strict';
 
 window.onload = function () {
+  // 오늘하루 그만보기
+  // check button-> make cookie
+  // there is a cookie? -> yes --> remove banner
 
+  // make cookie function
+  function setCookie(name, value, day) {
+    let today_date = new Date();
+    // one day is enough day = 1
+    // tommorrow should be different
+    today_date.setDate(today_date.getDate() + 1);
+    let here_cookie = '';
+    here_cookie += `${name}=${value};`;
+    here_cookie += `Expires=${today_date.toUTCString()}`;
+    // make cookie
+    document.cookie = here_cookie;
+  }
+  function getCookie(name) {
+    let cookies = document.cookie.split(';');
+    for (let i in cookies) {
+      if (cookies[i].indexOf(name) > -1) {
+        // there's the cookie
+        console.log('banner is erased');
+        return 1;
+      }
+    }
+    return 0;
+  }
+
+  let check_box = document.getElementById('banner-top-checkbox');
+  let banner_top = $('.banner-top');
+  let banner_top_toggle = $('.icon-header-banner');
+    
+  function checkCookie() {
+    let flag_cookie = getCookie('banner_checked');
+    // if checked the box
+    if (flag_cookie == 1) {
+      // banner top is disappeared
+      console.log('hided');
+      banner_top.remove();
+      banner_top_toggle.remove();
+    } 
+  }
+
+  checkCookie();
+
+  check_box.addEventListener('click', function () {
+    setCookie('banner_checked', 'checked', 1);
+    banner_top.slideUp(function () {
+      $(this).remove();
+      banner_top_toggle.remove();
+    });
+  });
+
+
+  // page remote
+  let remote_button = $('.page-remote').find('a');
+  let fix_menu_lst = [
+    0,
+    $('#notice').offset().top,
+    $('#research').offset().top,
+    $('#service').offset().top,
+    $('#sns').offset().top
+  ];
+  $.each(remote_button, function (index, item) {
+    $(this).click(function (e) {
+      remote_button.removeClass('page-remote-active');
+      $(this).addClass('page-remote-active');
+    });
+  });
+
+  // 이거는 진짜... wheel 이벤트 쓰던지.. 
+  window.addEventListener('scroll', function (e) {
+    let location_y = window.scrollY;
+    if (location_y < fix_menu_lst[1]) {
+      remote_button.removeClass('page-remote-active');
+      remote_button.eq(0).addClass('page-remote-active');
+    }else if (location_y >= fix_menu_lst[1] && location_y < fix_menu_lst[2]) {
+      remote_button.removeClass('page-remote-active');
+      remote_button.eq(1).addClass('page-remote-active');
+    } else if (location_y >= fix_menu_lst[2] && location_y < fix_menu_lst[3]) {
+      remote_button.removeClass('page-remote-active');
+      remote_button.eq(2).addClass('page-remote-active');
+    }else if (location_y >= fix_menu_lst[3] && location_y < fix_menu_lst[4]) {
+      remote_button.removeClass('page-remote-active');
+      remote_button.eq(3).addClass('page-remote-active');
+    }else if (location_y >= fix_menu_lst[4]) {
+      remote_button.removeClass('page-remote-active');
+      remote_button.eq(4).addClass('page-remote-active');
+    }
+  });
+
+
+  // header top right 
+  // search tool
+  // const search_tool_button = document.getElementsByClassName('search-tool');
+  let search_text = $('.search-tool').find('.search-text');
+  $('.icon-header-1').click(function () {
+    $('.search-tool').slideDown(200);
+  });
+  $('.search-tool').find('.search-reset').click(function () {
+    $('.search-tool').slideUp(200);
+  });
+  // if there's no contents, modal is appear
+  let modal_search_alert = $('.modal-search-alert');
+  $('.search-tool').find('input[type="submit"]').click(function (e) {
+    e.preventDefault();
+    let temp_flag = search_text.val();
+    if (!temp_flag) {
+      modal_search_alert.addClass('modal-search-alert-active');
+      $('.alert-confirm, .icon-cancel').click(function () {
+        modal_search_alert.removeClass('modal-search-alert-active', 200);
+      });
+      return false;
+    }
+  });
+
+  // swipers
   new Swiper ('.swp-banner-top', {
     loop: true,
     slidesPerView: 2,
@@ -19,18 +135,40 @@ window.onload = function () {
       prevEl: '.swp-button-prev-top-banner',
     },
   });
-
-  let lang_butt = $('.language-button');
-  lang_butt.click(function () {
-    $('.language').slideToggle();
-  });
-
+  // swiper banner top contorll
   $('.icon-header-banner').click(function () {
     $('.banner-top').slideToggle('500');
     $(this).toggleClass('icon-focused');
-  })
-
-  var swp_banner_main = new Swiper('.swp-banner-main', {
+  });
+  new Swiper('.swp-banner-middle', {
+    loop: true,
+    effect: 'fade',
+    autoplay: true,
+    speed: 1500,
+    delay: 1000,
+    navigation: {
+      nextEl: '.swp-button-next-middle-banner',
+      prevEl: '.swp-button-prev-middle-banner',
+    },
+  });
+  new Swiper('.swp-sch-event', {
+    loop: true,
+    effect: 'fade',
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swp-button-schedule-next',
+      prevEl: '.swp-button-schedule-prev',
+    },
+  });
+  new Swiper('.swp-inhanews-coop', {
+    loop: true,
+    delay: 1500,
+    navigation: {
+      nextEl: '.swp-inhanews-coop-next',
+      prevEl: '.swp-inhanews-coop-prev',
+    },
+  });
+  let swp_banner_main = new Swiper('.swp-banner-main', {
     loop: true,
     effect: 'fade',
     autoplay: {
@@ -46,41 +184,10 @@ window.onload = function () {
       clickable: true,
     },
   });
-
-  new Swiper('.swp-banner-middle', {
-    loop: true,
-    effect: 'fade',
-    delay: 1000,
-    // spaceBetween: 50,
-    navigation: {
-      nextEl: '.swp-button-next-middle-banner',
-      prevEl: '.swp-button-prev-middle-banner',
-    },
-  });
-  
-  new Swiper('.swp-sch-event', {
-    loop: true,
-    effect: 'fade',
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '.swp-button-schedule-next',
-      prevEl: '.swp-button-schedule-prev',
-    },
-  });
-
-  new Swiper('.swp-inhanews-coop', {
-    loop: true,
-    delay: 1500,
-    navigation: {
-      nextEl: '.swp-inhanews-coop-next',
-      prevEl: '.swp-inhanews-coop-prev',
-    },
-  });
-  
+  // swiper banner main controll
   $('.icon-pause').click(function () {
     $(this).toggleClass('icon-play');
     var temp = $(this).hasClass('icon-play');
-
     if (temp == true) {
       swp_banner_main.autoplay.stop();
     } else {
@@ -88,10 +195,13 @@ window.onload = function () {
     }
   });
 
+  // header language button event
+  const lang_butt = $('.language-button');
+  lang_butt.click(() => $('.language').slideToggle());
 
-  // notices title visual
-
-  let notice_data_1 = [
+  // example
+  // notices title temp data
+  const notice_data_1 = [
     {
       title: '2021년 8월 온라인 학위수여식 안내',
       date: '2021.08.09.',
@@ -123,7 +233,7 @@ window.onload = function () {
       page: '#'
     }
   ];
-  let notice_data_2 = [
+  const notice_data_2 = [
     {
       title: '[학생지원팀] 코로나19 수도권(인천) 거리두기 4단계 격상에 따른 교내시설이용 지침 안내',
       date: '2021.07.09.',
@@ -155,7 +265,7 @@ window.onload = function () {
       page: '#'
     }
   ];
-  let notice_data_3 = [
+  const notice_data_3 = [
     {
       title: '2021-2학기 재학생 최종등록 안내',
       date: '2021.09.15.',
@@ -187,7 +297,7 @@ window.onload = function () {
       page: '#'
     }
   ];
-  let notice_data_4 = [
+  const notice_data_4 = [
     {
       title: '제7회 연수인재육성재단 장학생 선발 안내',
       date: '2021.09.17.',
@@ -219,7 +329,7 @@ window.onload = function () {
       page: '#'
     }
   ];
-  let notice_data_5 = [
+  const notice_data_5 = [
     {
       title: '[BK글로컬다문화교육연구단 / 다문화융합연구소] 9-11월 초청 특강 안내',
       date: '2021.09.17.',
@@ -251,7 +361,7 @@ window.onload = function () {
       page: '#'
     }
   ];
-  let notice_data_6 = [
+  const notice_data_6 = [
     {
       title: '[공학교육혁신센터]  2021 전국 공학페스티벌  E²VJ(홍보대사) 학생 모집 ',
       date: '2021.09.17.',
@@ -283,7 +393,7 @@ window.onload = function () {
       page: '#'
     }
   ];
-  let notice_data_7 = [
+  const notice_data_7 = [
     {
       title: '한글날 기념행사 ‘한글 사랑 공모전’ 안내',
       date: '2021.09.14.',
@@ -315,7 +425,7 @@ window.onload = function () {
       page: '#'
     }
   ];
-  let notice_data_all = [
+  const notice_data_all = [
     notice_data_1,
     notice_data_2,
     notice_data_3,
@@ -324,7 +434,7 @@ window.onload = function () {
     notice_data_6,
     notice_data_7
   ];
-  let bid_data = [
+  const bid_data = [
     {
       title: '[공사입찰] [대학혁신지원사업] 2호동관 강의, 연구동 난방용 스팀 배관 교체 공사(긴급)',
       date: '2021.09.17.',
@@ -356,36 +466,26 @@ window.onload = function () {
       page: '#'
     }
   ];
+
   let notice_tit = $('.notice_tit');
-  
   let notice_cont = $('.notices-contents');
   let notice_box = notice_cont.find('>a');
 
-  let notice_sub_nav = $('.notices-sub-nav').find('ul> li> a');
+  let notice_subnav = $('.notices-sub-nav').find('ul > li > a');
 
-  notice_sub_nav.hover(function () {
-    $(this).toggleClass('sub-button-focused');
-
-  });
-
+  // function: matching array data to class
   function sort_data(_obj, _to) {
     $.each(_to, function (index, item) {
-      // notice_box의 index total 6개
+      // notice_box의 index total: 6
       let temp_data = _obj[index];
-
-      let temp_tit = $(this).find('.notices-contents-tit');
-      temp_tit.text(temp_data.title);
-      let temp_date = $(this).find('.notices-contents-date');
-      temp_date.text(temp_data.date);
-      // $(this).find('.notices_contents_tit').text(temp_data.title);
-      // $(this).find('notices_contents_date').text(temp_data.date)
+      $(this).find('.notices-contents-tit').text(temp_data.title);
+      $(this).find('.notices-contents-date').text(temp_data.date);
       $(this).attr('href', temp_data.page);
     })
   }
 
-  // at first
   sort_data(notice_data_1, notice_box);
-  
+
   $.each(notice_tit, function (index, item) {
     $(this).click(function (e) {
       e.preventDefault();
@@ -395,13 +495,13 @@ window.onload = function () {
       // contents
       if (index == 0) {
         sort_data(notice_data_1, notice_box);
+        notice_subnav.show();
       } else {
         sort_data(bid_data, notice_box);
+        notice_subnav.hide();
       }
     });
   });
-
-  let notice_subnav = $('.notices-sub-nav').find('ul > li > a');
 
   $.each(notice_subnav, function (index, item) {
     $(this).click(function (e) {
@@ -409,12 +509,12 @@ window.onload = function () {
       notice_subnav.removeClass('sub-button-focused');
       $(this).addClass('sub-button-focused');
       sort_data(notice_data_all[index], notice_box);
-    })
-  })
+    });
+  });
 
+  // footer site map toggle button
   $('.button-site-map').click(function () {
     $(this).find('.icon-angle-down').toggleClass('button-site-map-active');
     $('.site-map').find('> .page-container').slideToggle();
   });
-
 }

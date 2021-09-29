@@ -2,7 +2,6 @@
 <html lang="ko" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <!-- prevent IE unmatching -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="images/favicon.ico">
@@ -27,30 +26,51 @@
 
 <body >
 <!-- <div class="modal"></div> -->
+
+<!-- modal when search text == none -->
+<div class="modal-search-alert">
+  <div class="alert-box">
+    <div class="alert-tit">
+      <span>Message</span>
+      <i class="icon-cancel"></i>
+    </div>
+    <div class="alert-message">
+      <strong>검색어를 입력하세요</strong>
+    </div>
+    <button class="alert-confirm">확인</button>
+  </div>
+</div>
+
 <div id="home" class="wrap">
   <!-- page remote -->
   <div class="page-remote">
-    <a href="#" class="remote-1">
+    <a href="#home">
       <span>뉴스</span>
       <i class="remote-1-news"></i>
     </a>
-    <a href="#" class="remote-1">
-      <span>뉴스</span>
-      <i class="remote-1-news"></i>
+    <a href="#notice">
+      <span>소식</span>
+      <i class="remote-2-notice"></i>
     </a>
-    <a href="#" class="remote-1">
-      <span>뉴스</span>
-      <i class="remote-1-news"></i>
+    <a href="#research">
+      <span>연구</span>
+      <i class="remote-3-research"></i>
     </a>
-    <a href="#" class="remote-1">
-      <span>뉴스</span>
-      <i class="remote-1-news"></i>
+    <a href="#service">
+      <span>서비스</span>
+      <i class="remote-4-service"></i>
     </a>
-    <a href="#" class="remote-1">
-      <span>뉴스</span>
-      <i class="remote-1-news"></i>
+    <a href="#sns">
+      <span>SNS</span>
+      <i class="remote-5-sns"></i>
     </a>
   </div>
+
+  <!-- gotop -->
+  <a href="#home" class="gotop">
+    <span class="icon-gotop"></span>
+    <span>TOP</span>
+  </a>
   <!-- /page remote -->
 
   <!-- banner-top -->
@@ -107,7 +127,14 @@
           <li><a href="#">총동창회</a></li>
         </ul>
         <ul class="header-top-right">
-          <li><button class="icon-header-1"></button></li>
+          <li>
+            <form action="search.jsp" method="GET" class="search-tool">
+              <input class="search-text" type="text" name="search" placeholder="검색어를 입력하세요">
+              <input type="submit" value="user_search">
+              <input class="search-reset" type="reset" value="reset">
+            </form>
+            <button class="icon-header-1"></button>
+          </li>
           <li><button class="icon-header-banner icon-focused"></button></li>
           <li><button class="icon-header-3"></button></li>
         </ul>
@@ -242,7 +269,7 @@
   <!-- /inha-community -->
 
   <!-- notices -->
-  <section class="notices">
+  <section id="notice" class="notices">
     <div class="page-container">
       <aside class="notices-left">
         <ul>
@@ -444,7 +471,7 @@
   <!-- /inha-schedule -->
 
   <!-- inha-news -->
-  <section class="inhanews">
+  <section id="research" class="inhanews">
     <div class="page-container">
       <!-- inhanews top -->
       <div class="inhanews-top">
@@ -458,14 +485,14 @@
               <a href="#" class="contents-links-link"></a>
             </div>
           </div>
-          <div class="textbox">
+          <a class="textbox" href="#">
             <h4>연구성과</h4>
             <span class="textbox-tit">민경진 교수, 아로니아 항노화 효능 논문 저명학술지에 게재</span>
             <p class="textbox-content">
               아로니아베리, 항노화 효능 탁월 ▲ 민경진 생명과학과 교수 생명과학과 민경진 교수가 아로니아베리의 항노화 효능 관련 최신 선행연구 194건을 검토해 저술한 리뷰논문이 최근 저명학
             </p>
-            <a href="#" class="button-read-more">Read More</a>
-          </div>
+          </a>
+          <a href="#" class="button-read-more">Read More</a>
         </div>
         <!-- inhanews top newsletter -->
         <div class="inhanews-newsletter">
@@ -553,10 +580,10 @@
           </div>
         </div>
         <!-- inhanews bottom patent -->
-        <a class="inhanews-patent">
+        <a class="inhanews-patent" href="#">
           <div class="textbox">
             <i class="icon-patent"></i>
-            <strong>특허소실 - IT</strong>
+            <strong>특허소식 - IT</strong>
             <p>신규특허소식 2021년 7월호</p>
           </div>
           <div class="patent-img">
@@ -569,7 +596,7 @@
   <!-- /inha-news -->
 
   <!-- onestop -->
-  <section class="onestop">
+  <section id="service" class="onestop">
     <!-- onestop top -->
     <div class="onestop-top">
       <div class="page-container">
@@ -685,7 +712,7 @@
   <!-- /onestop -->
 
   <!-- inha-SNS -->
-  <section class="sns">
+  <section id="sns" class="sns">
     <div class="page-container">
       <div class="sns-tit">
         <span>
