@@ -4,11 +4,9 @@ window.onload = function () {
   // 오늘하루 그만보기
   // check button-> make cookie
   // there is a cookie? -> yes --> remove banner
-
-  // make cookie function
-  function setCookie(name, value, day) {
+  function setCookie(name, value, day=1) {
     let today_date = new Date();
-    // one day is enough day = 1
+    // one day is enough,, day = 1
     // tommorrow should be different
     today_date.setDate(today_date.getDate() + 1);
     let here_cookie = '';
@@ -28,7 +26,6 @@ window.onload = function () {
     }
     return 0;
   }
-
   let check_box = document.getElementById('banner-top-checkbox');
   let banner_top = $('.banner-top');
   let banner_top_toggle = $('.icon-header-banner');
@@ -43,20 +40,20 @@ window.onload = function () {
       banner_top_toggle.remove();
     } 
   }
-
+  // when we open the sites at first
   checkCookie();
-
   check_box.addEventListener('click', function () {
     setCookie('banner_checked', 'checked', 1);
     banner_top.slideUp(function () {
       $(this).remove();
       banner_top_toggle.remove();
+      // banner_top_toggle.css('pointer-events', 'none');
     });
   });
 
-
   // page remote
   let remote_button = $('.page-remote').find('a');
+  // position of sections
   let fix_menu_lst = [
     0,
     $('#notice').offset().top,
@@ -64,13 +61,13 @@ window.onload = function () {
     $('#service').offset().top,
     $('#sns').offset().top
   ];
+  console.log(fix_menu_lst);
   $.each(remote_button, function (index, item) {
     $(this).click(function (e) {
       remote_button.removeClass('page-remote-active');
       $(this).addClass('page-remote-active');
     });
   });
-
   // 이거는 진짜... wheel 이벤트 쓰던지.. 
   window.addEventListener('scroll', function (e) {
     let location_y = window.scrollY;
@@ -92,7 +89,6 @@ window.onload = function () {
     }
   });
 
-
   // header top right 
   // search tool
   // const search_tool_button = document.getElementsByClassName('search-tool');
@@ -103,7 +99,7 @@ window.onload = function () {
   $('.search-tool').find('.search-reset').click(function () {
     $('.search-tool').slideUp(200);
   });
-  // if there's no contents, modal is appear
+  // if there's no contents, alert modal is appear
   let modal_search_alert = $('.modal-search-alert');
   $('.search-tool').find('input[type="submit"]').click(function (e) {
     e.preventDefault();
@@ -115,6 +111,51 @@ window.onload = function () {
       });
       return false;
     }
+  });
+
+  // header navigation
+  let depth2_area = $('.header-bottom-depth2-area');
+  let depth2_lst = $('.depth2');
+  let depth1_button = $('.depth1').find('li');
+  let user_menu = $('.user-menu');
+  let depth2_close = $('.depth2-close');
+
+  depth2_lst.hide();
+  $.each(depth1_button, function (index, item) {
+    $(this).click(function (e) {
+      e.preventDefault();
+      depth2_lst.hide();
+      user_menu.hide();
+      depth2_close.show();
+      depth2_area.fadeIn();
+      depth2_lst.eq(index).slideDown();
+    });
+  });
+  depth2_close.click(function () {
+    depth2_lst.slideUp();
+    user_menu.show();
+    depth2_close.hide();
+    depth2_area.fadeOut();
+  });
+
+  // depth2 user-menu
+  let user_menu_button = $('.user-menu');
+  let user_menu_list = $('.user-menu-contents').find('ul');
+  let user_menu_list_button = $('.user-menu-buttons').find('li > a');
+
+  user_menu_button.click(function (e) {
+    e.preventDefault();
+    $('.depth2-user-menu').slideToggle();
+    $(this).toggleClass('user-menu-active');
+  });
+  $.each(user_menu_list_button, function (index, item) {
+    $(this).click(function (e) {
+      e.preventDefault();
+      user_menu_list_button.removeClass();
+      $(this).addClass('user-menu-button-active');
+      user_menu_list.hide();
+      user_menu_list.eq(index).show();
+    });
   });
 
   // swipers
@@ -140,6 +181,7 @@ window.onload = function () {
     $('.banner-top').slideToggle('500');
     $(this).toggleClass('icon-focused');
   });
+
   new Swiper('.swp-banner-middle', {
     loop: true,
     effect: 'fade',

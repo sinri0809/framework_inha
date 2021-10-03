@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +12,10 @@
   <script src="js/html5shiv.js"></script>
   <![endif]-->
   <!-- <script src="js/prefixfree.min.js"></script> -->
-  
+
   <link rel="stylesheet" href="css/fontello/css/animation.css">
   <link rel="stylesheet" href="css/fontello/css/fontello.css">
-  
+
   <link rel="stylesheet" href="js/swiper/swiper.min.css">
   <script src="js/swiper/swiper.min.js"></script>
 
@@ -24,883 +25,1161 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body >
-<!-- <div class="modal"></div> -->
+<body>
+  <!-- <div class="modal"></div> -->
 
-<!-- modal when search text == none -->
-<div class="modal-search-alert">
-  <div class="alert-box">
-    <div class="alert-tit">
-      <span>Message</span>
-      <i class="icon-cancel"></i>
-    </div>
-    <div class="alert-message">
-      <strong>검색어를 입력하세요</strong>
-    </div>
-    <button class="alert-confirm">확인</button>
-  </div>
-</div>
-
-<div id="home" class="wrap">
-  <!-- page remote -->
-  <div class="page-remote">
-    <a href="#home">
-      <span>뉴스</span>
-      <i class="remote-1-news"></i>
-    </a>
-    <a href="#notice">
-      <span>소식</span>
-      <i class="remote-2-notice"></i>
-    </a>
-    <a href="#research">
-      <span>연구</span>
-      <i class="remote-3-research"></i>
-    </a>
-    <a href="#service">
-      <span>서비스</span>
-      <i class="remote-4-service"></i>
-    </a>
-    <a href="#sns">
-      <span>SNS</span>
-      <i class="remote-5-sns"></i>
-    </a>
-  </div>
-
-  <!-- gotop -->
-  <a href="#home" class="gotop">
-    <span class="icon-gotop"></span>
-    <span>TOP</span>
-  </a>
-  <!-- /page remote -->
-
-  <!-- banner-top -->
-  <section class="banner-top">
-    <div class="page-container">
-      <div class="banner-top-navigation">
-        <div class="swp-button-prev-top-banner"></div>
-        <div class="swp-button-next-top-banner"></div>
+  <!-- modal when search text == none -->
+  <div class="modal-search-alert">
+    <div class="alert-box">
+      <div class="alert-tit">
+        <span>Message</span>
+        <i class="icon-cancel"></i>
       </div>
-      <div class="swp-banner-top-pagination"></div>
-      <div class="swiper-container swp-banner-top">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="#" class="banner-top-1"></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#" class="banner-top-2"></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#" class="banner-top-3"></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#" class="banner-top-4"></a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#" class="banner-top-5"></a>
+      <div class="alert-message">
+        <strong>검색어를 입력하세요</strong>
+      </div>
+      <button class="alert-confirm">확인</button>
+    </div>
+  </div>
+
+  <div id="home" class="wrap">
+    <!-- page remote -->
+    <div class="page-remote">
+      <a href="#home">
+        <span>뉴스</span>
+        <i class="remote-1-news"></i>
+      </a>
+      <a href="#notice">
+        <span>소식</span>
+        <i class="remote-2-notice"></i>
+      </a>
+      <a href="#research">
+        <span>연구</span>
+        <i class="remote-3-research"></i>
+      </a>
+      <a href="#service">
+        <span>서비스</span>
+        <i class="remote-4-service"></i>
+      </a>
+      <a href="#sns">
+        <span>SNS</span>
+        <i class="remote-5-sns"></i>
+      </a>
+    </div>
+    <!-- gotop -->
+    <a href="#home" class="gotop">
+      <span class="icon-gotop"></span>
+      <span>TOP</span>
+    </a>
+    <!-- /page remote -->
+
+    <!-- banner-top -->
+    <section class="banner-top">
+      <div class="page-container">
+        <div class="banner-top-navigation">
+          <div class="swp-button-prev-top-banner"></div>
+          <div class="swp-button-next-top-banner"></div>
+        </div>
+        <div class="swp-banner-top-pagination"></div>
+        <div class="swiper-container swp-banner-top">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="banner-top-1"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="banner-top-2"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="banner-top-3"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="banner-top-4"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="banner-top-5"></a>
+            </div>
           </div>
         </div>
+        <form action="" class="banner-top-check">
+          <input type="checkbox" name="check_box" id="banner-top-checkbox">
+          <label for="user">오늘 하루 그만보기</label>
+        </form>
       </div>
-      <form action="" class="banner-top-check">
-        <input type="checkbox" name="check_box" id="banner-top-checkbox">
-        <label for="user">오늘 하루 그만보기</label>
-      </form>
-    </div>
-  </section>
-  <!-- /banner-top -->
+    </section>
+    <!-- /banner-top -->
 
-  <!-- header -->
-  <header class="header">
-    <!-- header top -->
-    <div class="header-top">
-      <div class="page-container">
-        <ul class="header-top-left">
-          <li>
-            <a class="language-button" href="#">Language<i class="icon-angle-down"></i></a>
-            <ul class="language">
-              <li><a href="#">ENGLISH</a></li>
-              <li><a href="#">中國語</a></li>
+    <!-- header -->
+    <header class="header">
+      <!-- header top -->
+      <div class="header-top">
+        <div class="page-container">
+          <ul class="header-top-left">
+            <li>
+              <a class="language-button" href="#">Language<i class="icon-angle-down"></i></a>
+              <ul class="language">
+                <li><a href="#">ENGLISH</a></li>
+                <li><a href="#">中國語</a></li>
+              </ul>
+            </li>
+            <li><a href="#">인하광장</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">내정보</a></li>
+            <li><a href="#">총동창회</a></li>
+          </ul>
+          <ul class="header-top-right">
+            <li>
+              <form action="search.jsp" method="GET" class="search-tool">
+                <input class="search-text" type="text" name="search" placeholder="검색어를 입력하세요">
+                <input type="submit" value="user_search">
+                <input class="search-reset" type="reset" value="reset">
+              </form>
+              <button class="icon-header-1"></button>
+            </li>
+            <li><button class="icon-header-banner icon-focused"></button></li>
+            <li><button class="icon-header-3"></button></li>
+          </ul>
+        </div>
+      </div>
+      <!-- header bottom -->
+      <div class="header-bottom">
+        <div class="page-container">
+          <a href="#home" class="h-logo"></a>
+          <nav>
+            <ul class="depth1">
+              <li><a href="#">교육</a></li>
+              <li><a href="#">입학/취업</a></li>
+              <li><a href="#">산학/연구</a></li>
+              <li><a href="#">학사</a></li>
+              <li><a href="#">대학생활</a></li>
+              <li><a href="#">인하소식</a></li>
+              <li><a href="#">인하소개</a></li>
             </ul>
-          </li>
-          <li><a href="#">인하광장</a></li>
-          <li><a href="#">로그인</a></li>
-          <li><a href="#">내정보</a></li>
-          <li><a href="#">총동창회</a></li>
-        </ul>
-        <ul class="header-top-right">
-          <li>
-            <form action="search.jsp" method="GET" class="search-tool">
-              <input class="search-text" type="text" name="search" placeholder="검색어를 입력하세요">
-              <input type="submit" value="user_search">
-              <input class="search-reset" type="reset" value="reset">
-            </form>
-            <button class="icon-header-1"></button>
-          </li>
-          <li><button class="icon-header-banner icon-focused"></button></li>
-          <li><button class="icon-header-3"></button></li>
-        </ul>
+            <button class="depth2-close">
+              <i class="icon-cancel"></i>
+            </button>
+            <button class="user-menu">
+              <i class="icon-user-menu"></i>
+              <span>사용자메뉴</span>
+            </button>
+          </nav>
+        </div>
       </div>
-    </div>
-    <!-- header bottom -->
-    <div class="header-bottom">
+    </header>
+    <!-- /header -->
+
+    <!-- header bottom contents -->
+    <!-- __header bottom depth2 -->
+    <section class="header-bottom-depth2-area">
+      <div class="header-bottom-depth2">
+        <div class="page-container">
+          <!-- depth1[0] -->
+          <div class="depth2 depth2-0">
+            <div class="depth2-tit">
+              <h3>교육</h3>
+              <p>인하와 성장하는 인재, 미래 사회 핵심인재</p>
+            </div>
+  
+            <div class="depth2-cont">
+              <ul>
+                <h4>대학안내<i class="icon-angle-right"></i></h4>
+                <li><a href="#">2020 대학안내</a></li>
+              </ul>
+              <ul>
+                <h4>대학<i class="icon-angle-right"></i></h4>
+                <li><a href="#">대학 전체보기</a></li>
+                <li><a href="#">프런티어학부대학</a></li>
+                <li><a href="#">공과대학</a></li>
+                <li><a href="#">자연과학대학</a></li>
+                <li><a href="#">경영대학</a></li>
+                <li><a href="#">사범대학</a></li>
+                <li><a href="#">사회과학대학</a></li>
+                <li><a href="#">문과대학</a></li>
+                <li><a href="#">의과대학</a></li>
+                <li><a href="#">미래융합대학</a></li>
+                <li><a href="#">예술체육대학</a></li>
+                <li><a href="#">국제학부</a></li>
+                <li><a href="#">소프트웨어융합대학</a></li>
+              </ul>
+              <ul>
+                <h4>대학원<i class="icon-angle-right"></i></h4>
+                <li><a href="#">대학원 전체보기</a></li>
+                <li><a href="#">일반대학원<i class="icon-link"></i></a></li>
+                <li><a href="#">공학대학원<i class="icon-link"></i></a></li>
+                <li><a href="#">경영대학원<i class="icon-link"></i></a></li>
+                <li><a href="#">교육대학원<i class="icon-link"></i></a></li>
+                <li><a href="#">정책대학원<i class="icon-link"></i></a></li>
+                <li><a href="#">상담심리대학원<i class="icon-link"></i></a></li>
+                <li><a href="#">보건대학원<i class="icon-link"></i></a></li>
+                <li><a href="#">법학전문대학원<i class="icon-link"></i></a></li>
+                <li><a href="#">물류전문대학원<i class="icon-link"></i></a></li>
+                <li><a href="#">제조혁신전문대학원<i class="icon-link"></i></a></li>
+                <li><a href="#">정보통신대학원<i class="icon-link"></i></a></li>
+              </ul>
+              <ul>
+                <h4>국제교류학생<i class="icon-angle-right"></i></h4>
+                <li><a href="#">국제처<i class="icon-link"></i></a></li>
+                <li><a href="#">프로그램 종류</a></li>
+                <li><a href="#">장기 프로그램</a></li>
+                <li><a href="#">단기 프로그램</a></li>
+                <li><a href="#">해외대학 학점인정</a></li>
+              </ul>
+              <ul>
+                <h4>해외 대학<i class="icon-angle-right"></i></h4>
+                <li><a href="#">타슈켄트 인하대학교(IUT)</a></li>
+              </ul>
+              <ul>
+                <h4>기타교육과정<i class="icon-angle-right"></i></h4>
+                <li><a href="#">기타 교육과정 안내</a></li>
+              </ul>
+  
+            </div>
+          </div>
+          <!-- depth1[1] -->
+          <div class="depth2 depth2-1">
+            <div class="depth2-tit">
+              <h3>입학/취업</h3>
+              <p>인하와 성장하는 인재, 미래 사회 핵심인재</p>
+            </div>
+            <div class="depth2-cont">
+  
+              <ul>
+                <h4>대학<i class="icon-angle-right"></i></h4>
+                <li><a href="#">입학처</a></li>
+                <li><a href="#">국제처(외국인 입학)</a></li>
+              </ul>
+              <ul>
+                <h4>대학원<i class="icon-angle-right"></i></h4>
+                <li><a href="#">대학원 입학안내</a></li>
+              </ul>
+  
+              <ul>
+                <h4>기타교육과정<i class="icon-angle-right"></i></h4>
+                <li><a href="#">기타 교육과정 입학안내</a></li>
+              </ul>
+  
+              <ul>
+                <h4>취업/아르바이트<i class="icon-angle-right"></i></h4>
+                <li><a href="#">학생진로설계포털시스템</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- depth1[2] -->
+          <div class="depth2 depth2-2">
+            <div class="depth2-tit">
+              <h3>산학/연구</h3>
+              <p>인하와 성장하는 인재, 미래 사회 핵심인재</p>
+            </div>
+  
+            <div class="depth2-cont">
+              <ul>
+                <h4>산학협력단<i class="icon-angle-right"></i></h4>
+                <li><a href="#">산학협력단</a></li>
+              </ul>
+              <ul>
+                <h4>연구기관<i class="icon-angle-right"></i></h4>
+                <li><a href="#">BK21 교육연구단(팀)</a></li>
+                <li><a href="#">국가지정연구기관</a></li>
+                <li><a href="#">대학부설연구기관</a></li>
+              </ul>
+  
+              <ul>
+                <h4>연구지원<i class="icon-angle-right"></i></h4>
+                <li><a href="#">연구지원</a></li>
+              </ul>
+  
+            </div>
+          </div>
+          <!-- depth1[3] -->
+          <div class="depth2 depth2-3">
+            <div class="depth2-tit">
+              <h3>학사</h3>
+              <p>인하와 성장하는 인재, 미래 사회 핵심인재</p>
+            </div>
+            <div class="depth2-cont">
+              <ul>
+                <h4>학사일정<i class="icon-angle-right"></i></h4>
+                <li><a href="#">2021년 학사일정</a></li>
+              </ul>
+              <ul>
+                <h4>수업/성적<i class="icon-angle-right"></i></h4>
+                <li><a href="#">교과과정편성</a></li>
+                <li><a href="#">교양 교육과정</a></li>
+                <li><a href="#">수강신청</a></li>
+                <li><a href="#">재수강</a></li>
+                <li><a href="#">계절학기</a></li>
+                <li><a href="#">시험 및 성적평가</a></li>
+                <li><a href="#">해외대학 학점인정</a></li>
+                <li><a href="#">현장실습</a></li>
+              </ul>
+  
+              <ul>
+                <h4>참(眞)인재 프로그램<i class="icon-angle-right"></i></h4>
+                <li><a href="#">인하 배움(교과) 과정</a></li>
+                <li><a href="#">인하 더 배움(비교과) 과정</a></li>
+                <li><a href="#">ACE+ 사업단</a></li>
+              </ul>
+  
+              <ul>
+                <h4>학적<i class="icon-angle-right"></i></h4>
+                <li><a href="#">전과</a></li>
+                <li><a href="#">등록</a></li>
+                <li><a href="#">휴학</a></li>
+                <li><a href="#">복학</a></li>
+                <li><a href="#">제적/자퇴</a></li>
+                <li><a href="#">재입학</a></li>
+                <li><a href="#">유급</a></li>
+                <li><a href="#">학적정정</a></li>
+              </ul>
+  
+              <ul>
+                <h4>제2(다중)전공 / 마이크로전공 / 교직<i class="icon-angle-right"></i></h4>
+                <li><a href="#">복수전공</a></li>
+                <li><a href="#">부전공</a></li>
+                <li><a href="#">연계전공</a></li>
+                <li><a href="#">마이크로전공</a></li>
+                <li><a href="#">교직과정</a></li>
+                <li><a href="#">평생교육사과정</a></li>
+              </ul>
+  
+              <ul>
+                <h4>졸업/증명서 발급<i class="icon-angle-right"></i></h4>
+                <li><a href="#">졸업</a></li>
+                <li><a href="#">인하졸업인증</a></li>
+                <li><a href="#">증명서 발급안내</a></li>
+                <li><a href="#">우편증명신청</a></li>
+              </ul>
+  
+              <ul>
+                <h4>ROTC(학군사관)<i class="icon-angle-right"></i></h4>
+                <li><a href="#">ROTC 소개</a></li>
+                <li><a href="#">ROTC 선발</a></li>
+              </ul>
+  
+              <ul>
+                <h4>장학<i class="icon-angle-right"></i></h4>
+                <li><a href="#">장학금 지급규정</a></li>
+                <li><a href="#">교내 및 교외 장학금 종류</a></li>
+                <li><a href="#">장학금 지급 및 관리</a></li>
+                <li><a href="#">장학금 수혜 신청방법</a></li>
+                <li><a href="#">국가장학금 안내</a></li>
+                <li><a href="#">이중지원 안내</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+  
+            </div>
+          </div>
+          <!-- depth1[4] -->
+          <div class="depth2 depth2-4">
+            <div class="depth2-tit">
+              <h3>대학생활</h3>
+              <p>인하와 성장하는 인재, 미래 사회 핵심인재</p>
+            </div>
+            <div class="depth2-cont">
+              <ul>
+                <h4>편의서비스<i class="icon-angle-right"></i></h4>
+                <li><a href="#">학생증&국제학생증</a></li>
+                <li><a href="#">학생의료공제</a></li>
+                <li><a href="#">주차</a></li>
+                <li><a href="#">현금 입출금기</a></li>
+                <li><a href="#">IT서비스</a></li>
+              </ul>
+              <ul>
+                <h4>학생활동<i class="icon-angle-right"></i></h4>
+                <li><a href="#">학생자치기구</a></li>
+                <li><a href="#">방송국&신문사</a></li>
+                <li><a href="#">동아리</a></li>
+                <li><a href="#">축제</a></li>
+                <li><a href="#">멘토링</a></li>
+              </ul>
+  
+              <ul>
+                <h4>식단안내<i class="icon-angle-right"></i></h4>
+                <li><a href="#">학생식당(학생회관)</a></li>
+                <li><a href="#">학생식당(스낵)</a></li>
+                <li><a href="#">교직원식당</a></li>
+              </ul>
+  
+              <ul>
+                <h4>캠퍼스 시설<i class="icon-angle-right"></i></h4>
+                <li><a href="#">학생실습관</a></li>
+                <li><a href="#">생활관</a></li>
+                <li><a href="#">휴게실/생활도서관</a></li>
+                <li><a href="#">소비자생활협동조합</a></li>
+                <li><a href="#">대학건강센터</a></li>
+                <li><a href="#">상담센터/인권센터</a></li>
+                <li><a href="#">시설물 사용 지원</a></li>
+              </ul>
+  
+              <ul>
+                <h4>새내기 가이드<i class="icon-angle-right"></i></h4>
+                <li><a href="#">새내기 가이드</a></li>
+              </ul>
+  
+            </div>
+          </div>
+          <!-- depth1[5] -->
+          <div class="depth2 depth2-5">
+            <div class="depth2-tit">
+              <h3>인하소식</h3>
+              <p>인하와 성장하는 인재, 미래 사회 핵심인재</p>
+            </div>
+            <div class="depth2-cont">
+              <ul>
+                <h4>인하알림<i class="icon-angle-right"></i></h4>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">입찰공고</a></li>
+                <li><a href="#">행사/세미나</a></li>
+                <li><a href="#">교수초빙안내</a></li>
+                <li><a href="#">인하 캘린더</a></li>
+              </ul>
+              <ul>
+                <h4>인하뉴스<i class="icon-angle-right"></i></h4>
+                <li><a href="#">인하뉴스</a></li>
+                <li><a href="#">인하인 인터뷰</a></li>
+                <li><a href="#">산학협력단 소식</a></li>
+                <li><a href="#">산학협력단 뉴스레터</a></li>
+                <li><a href="#">특허소식</a></li>
+              </ul>
+  
+              <ul>
+                <h4>인하홍보<i class="icon-angle-right"></i></h4>
+                <li><a href="#">홍보동영상</a></li>
+                <li><a href="#">대학홍보지</a></li>
+                <li><a href="#">대학신문</a></li>
+                <li><a href="#">포토갤러리</a></li>
+              </ul>
+  
+            </div>
+          </div>
+          <!-- depth1[6] -->
+          <div class="depth2 depth2-6">
+            <div class="depth2-tit">
+              <h3>인하소개</h3>
+              <p>인하와 성장하는 인재, 미래 사회 핵심인재</p>
+            </div>
+            <div class="depth2-cont">
+              <ul>
+                <h4>대학이념<i class="icon-angle-right"></i></h4>
+                <li><a href="#">창학이념과 교육목표</a></li>
+                <li><a href="#">인하비전</a></li>
+              </ul>
+              <ul>
+                <h4>학교 법인<i class="icon-angle-right"></i></h4>
+                <li><a href="#">임원현황</a></li>
+                <li><a href="#">이사회 회의록</a></li>
+              </ul>
+              <ul>
+                <h4>총장실<i class="icon-angle-right"></i></h4>
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">프로필</a></li>
+                <li><a href="#">역대총장</a></li>
+              </ul>
+  
+              <ul>
+                <h4>대학기구<i class="icon-angle-right"></i></h4>
+                <li><a href="#">기구표</a></li>
+              </ul>
+  
+              <ul>
+                <h4>대학현황<i class="icon-angle-right"></i></h4>
+                <li><a href="#">통계연보</a></li>
+                <li><a href="#">규정집</a></li>
+                <li><a href="#">예산결산/기관장업무추진비 공고</a></li>
+              </ul>
+              <ul>
+                <h4>발자취<i class="icon-angle-right"></i></h4>
+                <li><a href="#">발자취</a></li>
+                <li><a href="#">연혁</a></li>
+              </ul>
+              <ul>
+                <h4>인하상징<i class="icon-angle-right"></i></h4>
+                <li><a href="#">로고</a></li>
+                <li><a href="#">상징물</a></li>
+                <li><a href="#">노래</a></li>
+              </ul>
+              <ul>
+                <h4>캠퍼스 안내<i class="icon-angle-right"></i></h4>
+                <li><a href="#">캠퍼스맵</a></li>
+                <li><a href="#">건물안내</a></li>
+                <li><a href="#">교내명소</a></li>
+                <li><a href="#">교내전화번호검색</a></li>
+                <li><a href="#">전화번호부</a></li>
+                <li><a href="#">인물통합검색</a></li>
+                <li><a href="#">사이트인덱스</a></li>
+              </ul>
+              <ul>
+                <h4>학교 오시는길<i class="icon-angle-right"></i></h4>
+                <li><a href="#">오시는 길</a></li>
+                <li><a href="#">셔틀버스(무료)</a></li>
+                <li><a href="#">통학버스-등교</a></li>
+                <li><a href="#">통학버스-하교</a></li>
+              </ul>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- __header bottom user-menu -->
+    <section class="depth2-user-menu">
       <div class="page-container">
-        <a href="#home" class="h-logo"></a>
-        <nav>
-          <ul class="depth1">
-            <li><a href="#">교육</a></li>
-            <li><a href="#">입학/취업</a></li>
-            <li><a href="#">산학/연구</a></li>
-            <li><a href="#">학사</a></li>
-            <li><a href="#">대학생활</a></li>
-            <li><a href="#">인하소식</a></li>
-            <li><a href="#">인하소개</a></li>
-          </ul>
-          <button class="user-menu">
-            <i class="icon-user-menu"></i>
-            <span>사용자메뉴</span>
-          </button>
-        </nav>
-      </div>
-    </div>
-  </header>
-  <!-- /header -->
-
-  <!-- banner-main -->
-  <section class="banner-main">
-    <div class="page-container">
-      <div class="swiper-container swp-banner-main">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="swp-banner-main-text-box">
-              <span>University News</span>
-              <h4>과기부 ‘대학ICT연구센터’ 선정, AI 시스템반도체 전문인력 양성</h4>
-              <p>인하대 김포메디컬캠퍼스 협약식 관련</p>
-              <a href="#">Read More
-                <i class="icon-plus"></i>
-              </a>
-            </div>
-            <img src="images/banner/main_1.jpg" alt="news1">
-          </div>
-          <div class="swiper-slide">
-            <div class="swp-banner-main-text-box">
-              <span>University News</span>
-              <h4>2021년 8월 학위수여식 온라인 생중계 개최</h4>
-              <p>학부·대학원생 등 1,804명 졸업</p>
-              <a href="#">Read More
-                <i class="icon-plus"></i>
-              </a>
-            </div>
-            <img src="images/banner/main_2.jpg" alt="news2">
-          </div>
-          <div class="swiper-slide">
-            <div class="swp-banner-main-text-box">
-              <span>University News</span>
-              <h4>인하공학교육혁신센터, 국내 유일 ‘VIP’교과목 운영 호평</h4>
-              <p>2014년부터 운영 중인 다학제·다학년 교과목</p>
-              <a href="#">Read More
-                <i class="icon-plus"></i>
-              </a>
-            </div>
-            <img src="images/banner/main_3.jpg" alt="news3">
-          </div>
-          <div class="swiper-slide">
-            <div class="swp-banner-main-text-box">
-              <span>University News</span>  
-              <h4>총장 담화문</h4>
-              <p>인하대 김포메디컬캠퍼스 협약식 관련</p>
-              <a href="#">Read More
-                <i class="icon-plus"></i>
-              </a>
-            </div>
-            <img src="images/banner/main_4.jpg" alt="news4">
-          </div>
-        </div>
-      </div>
-      <div class="swp-banner-main-control">
-        <div class="swp-banner-main-pagination"></div>
-        <button class="icon-pause"></button>
-      </div>
-    </div>
-  </section>
-  <!-- /banner-main -->
-
-  <!-- inha-community -->
-  <section class="inhacommu">
-    <div class="page-container">
-      <div class="inhacommu-wrapper">
-        <h5>
-          인하 뉴스
-          <a href="#" class="button-more"></a>
-        </h5>
-        <div class="inhacommu-contents">
-          <img class="button-sns-sets" src="images/news_img_1.jpg" alt="">
-          <div class="contents-links">
-            <a href="#" class="contents-links-facebook"></a>
-            <a href="#" class="contents-links-twitter"></a>
-            <a href="#" class="contents-links-link"></a>
-          </div>
-          <div class="inhacommu-contents-text">
-            <h6>김포시와 '김포메디컬캠퍼스 조성' 업무협약 체결</h6>
-            <p>지역과 기업이 상생하는 오픈캠퍼스와700병상 규모 이상 상급 종합병원 건립▲ 인하대 김포메디컬캠퍼스 조성을 위한 업무협약 참석자들이 기념 촬영을 하고 있다.본교는 경기도 김포시 </p>
-            <a href="#" class="button-read-more">Read more</a>
-          </div>
-        </div>
-      </div>
-      <div class="inhacommu-wrapper">
-        <h5>
-          인하인 인터뷰
-          <a href="#" class="button-more"></a>
-        </h5>
-        <div class="inhacommu-contents">
-          <img class="button-sns-sets" src="images/news_img_2.jpg" alt="">
-          <div class="contents-links">
-            <a href="#" class="contents-links-facebook"></a>
-            <a href="#" class="contents-links-twitter"></a>
-            <a href="#" class="contents-links-link"></a>
-          </div>
-          <div class="inhacommu-contents-text">
-            <h6>동문 인터뷰- AKKY Foundation</h6>
-            <p>동문 인터뷰 AKKY Foundation 뉴욕에서 인하대 건축학과 출신들로 시작한 비영리 단체 2013년부터 동문 후배 지원 프로그램 진</p>
-            <a href="#" class="button-read-more">Read more</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /inha-community -->
-
-  <!-- notices -->
-  <section id="notice" class="notices">
-    <div class="page-container">
-      <aside class="notices-left">
-        <ul>
-          <li><a href="#" class="notice_tit button-focused">공지사항</a></li>
-          <li><a href="#" class="notice_tit">입찰공고</a></li>
+        <ul class="user-menu-buttons">
+          <li><a class="user-menu-button-active" href="#">학생<i class="icon-direction"></i></a></li>
+          <li><a href="#">예비학생<i class="icon-direction"></i></a></li>
+          <li><a href="#">교직원<i class="icon-direction"></i></a></li>
+          <li><a href="#">동문<i class="icon-direction"></i></a></li>
         </ul>
-      </aside>
-      <div class="notices-right">
-        <div class="notices-sub-nav">
-          <ul>
-            <li><a href="#" class="sub-button-focused">전체</a></li>
-            <li><a href="#">코로나19</a></li>
-            <li><a href="#">학사</a></li>
-            <li><a href="#">장학</a></li>
-            <li><a href="#">특강</a></li>
-            <li><a href="#">모집/채용</a></li>
-            <li><a href="#">기타</a></li>
+        <div class="user-menu-contents">
+          <ul class="user-menu-cont user-menu-cont-active">
+            <li><a href="#">학사일정</a></li>
+            <li><a href="#">수업/성적</a></li>
+            <li><a href="#">학적</a></li>
+            <li><a href="#">국제교류학생</a></li>
+            <li><a href="#">수강신청</a></li>
+            <li><a href="#">인하졸업인증</a></li>
+            <li><a href="#">식당안내</a></li>
+            <li><a href="#">대학기구</a></li>
+            <li><a href="#">규정집</a></li>
+            <li><a href="#">편의시설</a></li>
+            <li><a href="#">민원/상담</a></li>
+            <li><a href="#">시설물 사용 지원</a></li>
+            <li><a href="#">IT 서비스</a></li>
+            <li><a href="#">학생의료공제</a></li>
+            <li><a href="#">인하광장</a></li>
+            <li><a href="#">인하포털시스템</a></li>
+            <li><a href="#">I-Class</a></li>
+            <li><a href="#">정석학술정보관</a></li>
+            <li><a href="#">취업안내</a></li>
+            <li><a href="#">국제처</a></li>
+            <li><a href="#">인터넷 증명서 발급</a></li>
+            <li><a href="#">무선인터넷서비스</a></li>
+            <li><a href="#">상담센터</a></li>
+            <li><a href="#">신문사/방송국</a></li>
+          </ul>
+          <ul class="user-menu-cont">
+            <li><a href="#">대학</a></li>
+            <li><a href="#">대학원</a></li>
+            <li><a href="#">국제교류학생</a></li>
+            <li><a href="#">학사일정</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">인하뉴스</a></li>
+            <li><a href="#">학생회/동아리</a></li>
+            <li><a href="#">건물안내</a></li>
+            <li><a href="#">학교 오시는 길</a></li>
+            <li><a href="#">편의시설</a></li>
+            <li><a href="#">추천명소</a></li>
+            <li><a href="#">홍보동영상</a></li>
+            <li><a href="#">교내 전화번호</a></li>
+            <li><a href="#">인물통합검색</a></li>
+            <li><a href="#">입학처</a></li>
+            <li><a href="#">국제처</a></li>
+            <li><a href="#">생활관</a></li>
+          </ul>
+          <ul class="user-menu-cont">
+            <li><a href="#">학사일정</a></li>
+            <li><a href="#">교내 전화번호</a></li>
+            <li><a href="#">인물통합검색</a></li>
+            <li><a href="#">규정집</a></li>
+            <li><a href="#">편의시설</a></li>
+            <li><a href="#">식당안내</a></li>
+            <li><a href="#">연구기관</a></li>
+            <li><a href="#">민원/상담</a></li>
+            <li><a href="#">대학기구</a></li>
+            <li><a href="#">IT 서비스</a></li>
+            <li><a href="#">인하포털시스템</a></li>
+            <li><a href="#">I-Class</a></li>
+            <li><a href="#">e-mail</a></li>
+            <li><a href="#">인하광장</a></li>
+            <li><a href="#">인터넷 증명서 발급</a></li>
+            <li><a href="#">발전기금</a></li>
+            <li><a href="#">노동조합</a></li>
+            <li><a href="#">Inha-Insight</a></li>
+            <li><a href="#">참교육 질관리 시스템</a></li>
+          </ul>
+          <ul class="user-menu-cont">
+            <li><a href="#">인하대학교 총동창회</a></li>
+            <li><a href="#">재미인하대학교 동문회</a></li>
+            <li><a href="#">발전기금</a></li>
+            <li><a href="#">학사일정</a></li>
+            <li><a href="#">증명서 발급안내</a></li>
+            <li><a href="#">대학기구</a></li>
+            <li><a href="#">교내 전화번호</a></li>
+            <li><a href="#">인물통합검색</a></li>
+            <li><a href="#">인하광장</a></li>
           </ul>
         </div>
-        <div class="notices-contents">
-          <a href="#" class="notices-contents-link">
-            <h6 class="notices-contents-tit"></h6>
-            <p class="notices-contents-date"></p>
-          </a>
-          <a href="#" class="notices-contents-link">
-            <h6 class="notices-contents-tit"></h6>
-            <p class="notices-contents-date"></p>
-          </a>
-          <a href="#" class="notices-contents-link">
-            <h6 class="notices-contents-tit"></h6>
-            <p class="notices-contents-date"></p>
-          </a>
-          <a href="#" class="notices-contents-link">
-            <h6 class="notices-contents-tit"></h6>
-            <p class="notices-contents-date"></p>
-          </a>
-          <a href="#" class="notices-contents-link">
-            <h6 class="notices-contents-tit"></h6>
-            <p class="notices-contents-date"></p>
-          </a>
-          <a href="#" class="notices-contents-link">
-            <h6 class="notices-contents-tit"></h6>
-            <p class="notices-contents-date"></p>
-          </a>
-        </div>
       </div>
-    </div>
-  </section>
-  <!-- /notices -->
+    </section>
+    <!-- /header bottom contents -->
 
-  <!-- banner-middle  -->
-  <section class="banner-middle">
-    <div class="swiper-container swp-banner-middle">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <a href="#" class="swp-banner-middle-1"></a>
-        </div>
-        <div class="swiper-slide">
-          <a href="#" class="swp-banner-middle-2"></a>
-        </div>
-        <div class="swiper-slide">
-          <a href="#" class="swp-banner-middle-3"></a>
-        </div>
-      </div>
+    <!-- banner-main -->
+    <section class="banner-main">
       <div class="page-container">
-        <div class="swp-button-prev-middle-banner"></div>
-        <div class="swp-button-next-middle-banner"></div>
-      </div>
-    </div>
-  </section>
-  <!-- /banner-middle  -->
-
-  <!-- inha-schedule -->
-  <section class="schedule">
-    <div class="page-container">
-      <!-- inha schedule calender -->
-      <div class="schedule-calender">
-        <a href="#" class="button-calender-more"></a>
-        <div class="calender-tit">
-          <h6>인하 캘린더</h6>
-          <span class="schedule-date">2021. 08.</span>
-        </div>
-        <div class="calender-content">
-          <ol>
-            <li>
-              <span class="content-date">01.13. ~ 12.31.</span>
-              <a href="#"><p>[학부생 대상] 2021년도 법정의무교육(온라인 교육) 실시 안내 </p></a>
-            </li>
-            <li>
-              <span class="content-date">01.21. ~ 12.31.</span>
-              <a href="#"><p>[대학원생 대상] 2021년도 법정의무교육(온라인 교육) 실시 안내</p></a>
-            </li>
-            <li>
-              <span class="content-date">06.17. ~ 08.31.</span>
-              <a href="#"><p>[상담센터] 2021 하계 비대면 집단상담 프로그램 신청 안내 </p></a>
-            </li>
-            <li>
-              <span class="content-date">06.29. ~ 08.26.</span>
-              <a href="#"><p>[상담센터] 2021 하계 비대면 집단상담 프로그램 신청 안내 </p></a>
-            </li>
-          </ol>
-        </div>
-      </div>
-      <!-- inha schedule event -->
-      <div class="schedule-event">
-        <div class="schedule-event-tit">
-          <h6>행사/세미나</h6>
-          <div class="swp-sch-event-controller">
-            <button class="swp-button-schedule-prev"></button>
-            <button class="swp-button-schedule-next"></button>
-          </div>
-        </div>
-        <div class="schedule-event-content">
-          <div class="swiper-container swp-sch-event">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/info_1.jpg" alt="content1">
-                <div class="contents-links">
-                  <a href="#" class="contents-links-facebook"></a>
-                  <a href="#" class="contents-links-twitter"></a>
-                  <a href="#" class="contents-links-link"></a>
-                </div>
-                <a href="#">
-                  <span class="event-content-tit">인하 ACE+사업-대학혁신지원사업 공동 포럼 (11.28.)</span>
-                  <p>인하 ACE+사업-대학혁신지원사업 공동 포럼을 아래와 같이 개최하오니 여러분의 많은 관심과 참여 바랍니다. 1. 행사</p>
+        <div class="swiper-container swp-banner-main">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swp-banner-main-text-box">
+                <span>University News</span>
+                <h4>과기부 ‘대학ICT연구센터’ 선정, AI 시스템반도체 전문인력 양성</h4>
+                <p>인하대 김포메디컬캠퍼스 협약식 관련</p>
+                <a href="#">Read More
+                  <i class="icon-plus"></i>
                 </a>
               </div>
-              <div class="swiper-slide">
-                <img src="images/info_2.jpg" alt="content1">
-                <div class="contents-links">
-                  <a href="" class="contents-links-facebook"></a>
-                  <a href="" class="contents-links-twitter"></a>
-                  <a href="" class="contents-links-link"></a>
-                </div>
-                <a href="#">
-                  <span class="event-content-tit">법학전문대학원 학술주간 - 새로운 10년을 위하여 -</span>
-                  <p>안녕하세요 법학연구소입니다. 법학전문대학원 법학연구소에서는 「새로운10년을 위하여」라는 주제로  2020년 10월 30일 토요일부터 11월 19일 목요일까지 법학전문대학원 학술</p>
+              <img src="images/banner/main_1.jpg" alt="news1">
+            </div>
+            <div class="swiper-slide">
+              <div class="swp-banner-main-text-box">
+                <span>University News</span>
+                <h4>2021년 8월 학위수여식 온라인 생중계 개최</h4>
+                <p>학부·대학원생 등 1,804명 졸업</p>
+                <a href="#">Read More
+                  <i class="icon-plus"></i>
                 </a>
               </div>
-              <div class="swiper-slide">
-                <img src="images/info_3.jpg" alt="content1">
-                <div class="contents-links">
-                  <a href="" class="contents-links-facebook"></a>
-                  <a href="" class="contents-links-twitter"></a>
-                  <a href="" class="contents-links-link"></a>
-                </div>
-                <a href="#">
-                  <span class="event-content-tit">인하 ACE+사업-대학혁신지원사업 공동 포럼 (11.28.)</span>
-                  <p>인하 ACE+사업-대학혁신지원사업 공동 포럼을 아래와 같이 개최하오니 여러분의 많은 관심과 참여 바랍니다. 1. 행사 개요  가. 행사명: 제 3회 인하 ACE+사업 성과확산 포럼</p>
+              <img src="images/banner/main_2.jpg" alt="news2">
+            </div>
+            <div class="swiper-slide">
+              <div class="swp-banner-main-text-box">
+                <span>University News</span>
+                <h4>인하공학교육혁신센터, 국내 유일 ‘VIP’교과목 운영 호평</h4>
+                <p>2014년부터 운영 중인 다학제·다학년 교과목</p>
+                <a href="#">Read More
+                  <i class="icon-plus"></i>
                 </a>
               </div>
-              <div class="swiper-slide">
-                <img src="images/info_4.jpg" alt="content1">
-                <div class="contents-links">
-                  <a href="" class="contents-links-facebook"></a>
-                  <a href="" class="contents-links-twitter"></a>
-                  <a href="" class="contents-links-link"></a>
-                </div>
-                <a href="#">
-                  <span class="event-content-tit">[공지] 제44회 글로컬 다문화교육포럼 국내학자초청 특강 </span>
-                  <p>11월 26일 인하대 BK21+글로컬다문화교육전문인력양성사업팀(사업팀장 김영순 교수)이 주최하는 글로컬 다문화교육포럼 에서 이민희 교수님(강원대)을 모시고 특강을 실시합니다. </p>
+              <img src="images/banner/main_3.jpg" alt="news3">
+            </div>
+            <div class="swiper-slide">
+              <div class="swp-banner-main-text-box">
+                <span>University News</span>
+                <h4>총장 담화문</h4>
+                <p>인하대 김포메디컬캠퍼스 협약식 관련</p>
+                <a href="#">Read More
+                  <i class="icon-plus"></i>
                 </a>
               </div>
-              <div class="swiper-slide">
-                <img src="images/info_5.png" alt="content1">
-                <div class="contents-links">
-                  <a href="" class="contents-links-facebook"></a>
-                  <a href="" class="contents-links-twitter"></a>
-                  <a href="" class="contents-links-link"></a>
-                </div>
-                <a href="#">
-                  <span class="event-content-tit">인천가정법원, 인하대 법학연구소, 인천일보 공동 심포지엄 안내</span>
-                  <p>  건강한 이혼과 자녀양육을 위한 공동 심포지엄    □ 일시 : 2019년 11월 22일(금) 10:00~12:00□ 장소 : 인하대학교 본관 현경홀(구. 중강당)□ 주최 : 인</p>
-                </a>
-              </div>
+              <img src="images/banner/main_4.jpg" alt="news4">
             </div>
           </div>
         </div>
+        <div class="swp-banner-main-control">
+          <div class="swp-banner-main-pagination"></div>
+          <button class="icon-pause"></button>
+        </div>
       </div>
-      <!-- inha schedule buttons -->
-      <div class="schedule-buttons">
-        <a href="#" class="sch-fund">
-          <i class="icon-fund"></i>
-          <div class="sch-fund-text-box">
-            <span>INHA</span>
-            <h4>발전기금</h4>
-          </div>
-        </a>
-        <a href="#" class="sch-coop">
-          <i class="icon-coop"></i>
-          <div class="sch-coop-text-box">
-            <h4>산학협력단</h4>
-            <span>(산학/연구포털시스템)</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- /inha-schedule -->
+    </section>
+    <!-- /banner-main -->
 
-  <!-- inha-news -->
-  <section id="research" class="inhanews">
-    <div class="page-container">
-      <!-- inhanews top -->
-      <div class="inhanews-top">
-        <!-- inhanews top hot -->
-        <div class="inhanews-hot">
-          <div class="inhanews-hot-img">
-            <img src="images/coop_img.jpg" alt="coop-img">
+    <!-- inha-community -->
+    <section class="inhacommu">
+      <div class="page-container">
+        <div class="inhacommu-wrapper">
+          <h5>
+            인하 뉴스
+            <a href="#" class="button-more"></a>
+          </h5>
+          <div class="inhacommu-contents">
+            <img class="button-sns-sets" src="images/news_img_1.jpg" alt="">
             <div class="contents-links">
               <a href="#" class="contents-links-facebook"></a>
               <a href="#" class="contents-links-twitter"></a>
               <a href="#" class="contents-links-link"></a>
             </div>
+            <div class="inhacommu-contents-text">
+              <h6>김포시와 '김포메디컬캠퍼스 조성' 업무협약 체결</h6>
+              <p>지역과 기업이 상생하는 오픈캠퍼스와700병상 규모 이상 상급 종합병원 건립▲ 인하대 김포메디컬캠퍼스 조성을 위한 업무협약 참석자들이 기념 촬영을 하고 있다.본교는 경기도 김포시 </p>
+              <a href="#" class="button-read-more">Read more</a>
+            </div>
           </div>
-          <a class="textbox" href="#">
-            <h4>연구성과</h4>
-            <span class="textbox-tit">민경진 교수, 아로니아 항노화 효능 논문 저명학술지에 게재</span>
-            <p class="textbox-content">
-              아로니아베리, 항노화 효능 탁월 ▲ 민경진 생명과학과 교수 생명과학과 민경진 교수가 아로니아베리의 항노화 효능 관련 최신 선행연구 194건을 검토해 저술한 리뷰논문이 최근 저명학
-            </p>
-          </a>
-          <a href="#" class="button-read-more">Read More</a>
         </div>
-        <!-- inhanews top newsletter -->
-        <div class="inhanews-newsletter">
-          <div class="inhanews-newsletter-left">
-            <img src="images/newletter.jpg" alt="">
+        <div class="inhacommu-wrapper">
+          <h5>
+            인하인 인터뷰
+            <a href="#" class="button-more"></a>
+          </h5>
+          <div class="inhacommu-contents">
+            <img class="button-sns-sets" src="images/news_img_2.jpg" alt="">
+            <div class="contents-links">
+              <a href="#" class="contents-links-facebook"></a>
+              <a href="#" class="contents-links-twitter"></a>
+              <a href="#" class="contents-links-link"></a>
+            </div>
+            <div class="inhacommu-contents-text">
+              <h6>동문 인터뷰- AKKY Foundation</h6>
+              <p>동문 인터뷰 AKKY Foundation 뉴욕에서 인하대 건축학과 출신들로 시작한 비영리 단체 2013년부터 동문 후배 지원 프로그램 진</p>
+              <a href="#" class="button-read-more">Read more</a>
+            </div>
           </div>
-          <div class="inhanews-newsletter-right">
-            <h5>
-              산하협력단<br>
-              뉴스레터
-            </h5>
+        </div>
+      </div>
+    </section>
+    <!-- /inha-community -->
+
+    <!-- notices -->
+    <section id="notice" class="notices">
+      <div class="page-container">
+        <aside class="notices-left">
+          <ul>
+            <li><a href="#" class="notice_tit button-focused">공지사항</a></li>
+            <li><a href="#" class="notice_tit">입찰공고</a></li>
+          </ul>
+        </aside>
+        <div class="notices-right">
+          <div class="notices-sub-nav">
+            <ul>
+              <li><a href="#" class="sub-button-focused">전체</a></li>
+              <li><a href="#">코로나19</a></li>
+              <li><a href="#">학사</a></li>
+              <li><a href="#">장학</a></li>
+              <li><a href="#">특강</a></li>
+              <li><a href="#">모집/채용</a></li>
+              <li><a href="#">기타</a></li>
+            </ul>
+          </div>
+          <div class="notices-contents">
+            <a href="#" class="notices-contents-link">
+              <h6 class="notices-contents-tit"></h6>
+              <p class="notices-contents-date"></p>
+            </a>
+            <a href="#" class="notices-contents-link">
+              <h6 class="notices-contents-tit"></h6>
+              <p class="notices-contents-date"></p>
+            </a>
+            <a href="#" class="notices-contents-link">
+              <h6 class="notices-contents-tit"></h6>
+              <p class="notices-contents-date"></p>
+            </a>
+            <a href="#" class="notices-contents-link">
+              <h6 class="notices-contents-tit"></h6>
+              <p class="notices-contents-date"></p>
+            </a>
+            <a href="#" class="notices-contents-link">
+              <h6 class="notices-contents-tit"></h6>
+              <p class="notices-contents-date"></p>
+            </a>
+            <a href="#" class="notices-contents-link">
+              <h6 class="notices-contents-tit"></h6>
+              <p class="notices-contents-date"></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /notices -->
+
+    <!-- banner-middle  -->
+    <section class="banner-middle">
+      <div class="swiper-container swp-banner-middle">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#" class="swp-banner-middle-1"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="swp-banner-middle-2"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="swp-banner-middle-3"></a>
+          </div>
+        </div>
+        <div class="page-container">
+          <div class="swp-button-prev-middle-banner"></div>
+          <div class="swp-button-next-middle-banner"></div>
+        </div>
+      </div>
+    </section>
+    <!-- /banner-middle  -->
+
+    <!-- inha-schedule -->
+    <section class="schedule">
+      <div class="page-container">
+        <!-- inha schedule calender -->
+        <div class="schedule-calender">
+          <a href="#" class="button-calender-more"></a>
+          <div class="calender-tit">
+            <h6>인하 캘린더</h6>
+            <span class="schedule-date">2021. 08.</span>
+          </div>
+          <div class="calender-content">
             <ol>
               <li>
-                <a href="">2021년 7월호</a>
+                <span class="content-date">01.13. ~ 12.31.</span>
+                <a href="#">
+                  <p>[학부생 대상] 2021년도 법정의무교육(온라인 교육) 실시 안내 </p>
+                </a>
               </li>
               <li>
-                <a href="">2021년 6월호</a>
+                <span class="content-date">01.21. ~ 12.31.</span>
+                <a href="#">
+                  <p>[대학원생 대상] 2021년도 법정의무교육(온라인 교육) 실시 안내</p>
+                </a>
               </li>
               <li>
-                <a href="">2021년 5월호</a>
+                <span class="content-date">06.17. ~ 08.31.</span>
+                <a href="#">
+                  <p>[상담센터] 2021 하계 비대면 집단상담 프로그램 신청 안내 </p>
+                </a>
               </li>
               <li>
-                <a href="">2021년 4월호</a>
+                <span class="content-date">06.29. ~ 08.26.</span>
+                <a href="#">
+                  <p>[상담센터] 2021 하계 비대면 집단상담 프로그램 신청 안내 </p>
+                </a>
               </li>
             </ol>
           </div>
         </div>
-      </div>
-      <!-- inhanews bottom -->
-      <div class="inhanews-bottom">
-        <!-- inhanews bottom coop -->
-        <div class="inhanews-coop">
-          <div class="inhanews-coop-tit">
-            <strong class="inhanews-coop-name">산학협력단 소식</strong>
-            <div class="inhanews-coop-controller">
-              <div class="swp-inhanews-coop-prev"></div>
-              <div class="swp-inhanews-coop-next"></div>
+        <!-- inha schedule event -->
+        <div class="schedule-event">
+          <div class="schedule-event-tit">
+            <h6>행사/세미나</h6>
+            <div class="swp-sch-event-controller">
+              <button class="swp-button-schedule-prev"></button>
+              <button class="swp-button-schedule-next"></button>
             </div>
           </div>
-          <div class="swiper-container swp-inhanews-coop">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="#">
-                  <img src="images/coop_n_1.jpg" alt="">
-                  <div class="textbox">
-                    <span class="textbox-tit">인하가족회사소개: 대동도어</span>
-                    <p class="textbox-content">인하가족회사소개 대동도어1979년 대기산업으로
-                      최초 설립. 2001.9.1. 대기오토모티브 사명변경 신설
-                      2003년 10월 기업 부설 연구소 최초 설립2014년 3월
-                      대동도어</p>
+          <div class="schedule-event-content">
+            <div class="swiper-container swp-sch-event">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/info_1.jpg" alt="content1">
+                  <div class="contents-links">
+                    <a href="#" class="contents-links-facebook"></a>
+                    <a href="#" class="contents-links-twitter"></a>
+                    <a href="#" class="contents-links-link"></a>
                   </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#">
-                  <img src="images/coop_n_2.jpg" alt="">
-                  <div class="textbox">
-                    <span class="textbox-tit">표준분석연구원 연구장비 소개(BET)</span>
-                    <p class="textbox-content">표준분석연구원 연구장비 소개(BET)1. 장비명: 비표면적 분석기(BET)2. 도입 시기 : 2006년 05월3. 원리 및 특징비표면적 및 기공분석 장치는 물리흡착 또는 화학흡착을</p>
+                  <a href="#">
+                    <span class="event-content-tit">인하 ACE+사업-대학혁신지원사업 공동 포럼 (11.28.)</span>
+                    <p>인하 ACE+사업-대학혁신지원사업 공동 포럼을 아래와 같이 개최하오니 여러분의 많은 관심과 참여 바랍니다. 1. 행사</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/info_2.jpg" alt="content1">
+                  <div class="contents-links">
+                    <a href="" class="contents-links-facebook"></a>
+                    <a href="" class="contents-links-twitter"></a>
+                    <a href="" class="contents-links-link"></a>
                   </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#">
-                  <img src="images/coop_n_3.jpg" alt="">
-                  <div class="textbox">
-                    <span class="textbox-tit">인하가족회사소개: 대동도어</span>
-                    <p class="textbox-content">인하가족회사소개 대동도어1979년 대기산업으로
-                      최초 설립. 2001.9.1. 대기오토모티브 사명변경 신설
-                      2003년 10월 기업 부설 연구소 최초 설립2014년 3월
-                      대동도어</p>
+                  <a href="#">
+                    <span class="event-content-tit">법학전문대학원 학술주간 - 새로운 10년을 위하여 -</span>
+                    <p>안녕하세요 법학연구소입니다. 법학전문대학원 법학연구소에서는 「새로운10년을 위하여」라는 주제로 2020년 10월 30일 토요일부터 11월 19일 목요일까지 법학전문대학원 학술
+                    </p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/info_3.jpg" alt="content1">
+                  <div class="contents-links">
+                    <a href="" class="contents-links-facebook"></a>
+                    <a href="" class="contents-links-twitter"></a>
+                    <a href="" class="contents-links-link"></a>
                   </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#">
-                  <img src="images/coop_n_4.jpg" alt="">
-                  <div class="textbox">
-                    <span class="textbox-tit">표준분석연구원 연구장비 소개(BET)</span>
-                    <p class="textbox-content">표준분석연구원 연구장비 소개(BET)1. 장비명: 비표면적 분석기(BET)2. 도입 시기 : 2006년 05월3. 원리 및 특징비표면적 및 기공분석 장치는 물리흡착 또는 화학흡착을</p>
+                  <a href="#">
+                    <span class="event-content-tit">인하 ACE+사업-대학혁신지원사업 공동 포럼 (11.28.)</span>
+                    <p>인하 ACE+사업-대학혁신지원사업 공동 포럼을 아래와 같이 개최하오니 여러분의 많은 관심과 참여 바랍니다. 1. 행사 개요 가. 행사명: 제 3회 인하 ACE+사업 성과확산
+                      포럼</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/info_4.jpg" alt="content1">
+                  <div class="contents-links">
+                    <a href="" class="contents-links-facebook"></a>
+                    <a href="" class="contents-links-twitter"></a>
+                    <a href="" class="contents-links-link"></a>
                   </div>
-                </a>
+                  <a href="#">
+                    <span class="event-content-tit">[공지] 제44회 글로컬 다문화교육포럼 국내학자초청 특강 </span>
+                    <p>11월 26일 인하대 BK21+글로컬다문화교육전문인력양성사업팀(사업팀장 김영순 교수)이 주최하는 글로컬 다문화교육포럼 에서 이민희 교수님(강원대)을 모시고 특강을 실시합니다.
+                    </p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/info_5.png" alt="content1">
+                  <div class="contents-links">
+                    <a href="" class="contents-links-facebook"></a>
+                    <a href="" class="contents-links-twitter"></a>
+                    <a href="" class="contents-links-link"></a>
+                  </div>
+                  <a href="#">
+                    <span class="event-content-tit">인천가정법원, 인하대 법학연구소, 인천일보 공동 심포지엄 안내</span>
+                    <p> 건강한 이혼과 자녀양육을 위한 공동 심포지엄 □ 일시 : 2019년 11월 22일(금) 10:00~12:00□ 장소 : 인하대학교 본관 현경홀(구. 중강당)□ 주최 : 인
+                    </p>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- inhanews bottom patent -->
-        <a class="inhanews-patent" href="#">
-          <div class="textbox">
-            <i class="icon-patent"></i>
-            <strong>특허소식 - IT</strong>
-            <p>신규특허소식 2021년 7월호</p>
-          </div>
-          <div class="patent-img">
-            <img src="images/invent_1.jpg" alt="">
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- /inha-news -->
-
-  <!-- onestop -->
-  <section id="service" class="onestop">
-    <!-- onestop top -->
-    <div class="onestop-top">
-      <div class="page-container">
-        <ul>
-          <li>
-            <a href="#">
-              <i class="icon-onestop-main-1"></i>
-              <span>입학안내</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="icon-onestop-main-2"></i>
-              <span>취업안내</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="icon-onestop-main-3"></i>
-              <span>인하광장</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="icon-onestop-main-4"></i>
-              <span>국제처</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- onestop bottom -->
-    <div class="onestop-bottom">
-      <div class="onestop-bottom-contents">
-        <div class="page-container">
-          <div class="onestop-graduate-sch">
-            <a href="#" class="link-graduate-sch">
-              <div class="tit-box">
-                <span>대학원 안내</span>
-                <button class="button-more"></button>
-              </div>
-            </a>
-          </div>
-          <div class="onestop-right">
-            <span>One-Stop Services</span>
-            <ul class="onestop-buttons">
-              <li>
-                <a href="#">
-                  <i class="icon-onestop-1"></i><span>인하포털시스템</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="icon-onestop-2"></i><span>I-Class</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="icon-onestop-3"></i><span>전화번호안내(긴급)</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="icon-onestop-4"></i><span>학생통학버스</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="icon-onestop-5"></i><span>정석학술정보관</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="icon-onestop-6"></i><span>기부현황</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="icon-onestop-7"></i><span>수강신청(학부)</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="icon-onestop-8"></i><span>오시는 길</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="icon-onestop-9"></i><span>2021-2 교수초빙</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="icon-onestop-10"></i><span>재학생 등록안내</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="icon-onestop-11"></i><span>온&#183;오프 증명서 발급안내</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="icon-onestop-12"></i><span>인터넷증명발급</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /onestop -->
-
-  <!-- inha-SNS -->
-  <section id="sns" class="sns">
-    <div class="page-container">
-      <div class="sns-tit">
-        <span>
-          INHA <b>SNS</b>
-        </span>
-        <div class="sns-box">
-          <span class="sns-f"></span>
-          <span class="sns-b"></span>
-          <span class="sns-y"></span>
-          <span class="sns-i"></span>
-        </div>
-      </div>
-
-      <div class="sns-content">
-        <ol>
-          <li>
-            <a href="#" class="sns-c">
-              <img src="images/sns_1.jpg" alt="sns-1">
-              <div class="style-p">
-                <span class="tit">학교 홍보 웹툰 <온보사> 13화</span>
-                <span class="date">2021.08.23.</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="sns-c">
-              <img src="images/sns_2.jpg" alt="sns-2">
-              <div class="style-p">
-                <span class="tit">인하 라이프 아카데미 4기 모집</span>
-                <span class="date">2021.08.17.</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="sns-c">
-              <img src="images/sns_3.jpg" alt="sns-3">
-              <div class="style-p">
-                <span class="tit">2021-2 수업 방식 안내</span>
-                <span class="date">2021.08.23.</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="sns-c">
-              <img src="images/sns_4.jpg" alt="sns-4">
-              <div class="style-p">
-                <span class="tit">단편영화 Teaser - <비밀을 아는건 우리뿐></span>
-                <span class="date">2021.08.17.</span>
-              </div>
-            </a>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
-  <!-- /inha-SNS -->
-
-  <!-- footer -->
-  <footer class="footer">
-    <!-- footer sitemap -->
-    <section class="site-map">
-      <em class="button-site-map">
-        <b>LINK</b>주요 사이트 및 서비스 바로가기<i class="icon-angle-down"></i>
-      </em>
-      <div class="page-container">
-        <div>
-          <span>대학/대학원</span>
-          <ul>
-            <li><a href="#">프런티어 학부대학</a></li>
-            <li><a href="#">공과대학</a></li>
-            <li><a href="#">자연과학대학</a></li>
-            <li><a href="#">경영대학</a></li>
-            <li><a href="#">사범대학</a></li>
-            <li><a href="#">사회과학대학</a></li>
-            <li><a href="#">문과대학</a></li>
-            <li><a href="#">의과대학</a></li>
-            <li><a href="#">미래융합대학</a></li>
-            <li><a href="#">예술체육학부</a></li>
-            <li><a href="#">국제학부</a></li>
-            <li><a href="#">첨단SW융합학부</a></li>
-            <li><a href="#">일반대학원</a></li>
-            <li><a href="#">공학대학원</a></li>
-            <li><a href="#">경영대학원</a></li>
-            <li><a href="#">교육대학원</a></li>
-            <li><a href="#">정책대학원</a></li>
-            <li><a href="#">상담심리대학원</a></li>
-            <li><a href="#">보건대학원</a></li>
-            <li><a href="#">법학전문대학원</a></li>
-            <li><a href="#">물류전문대학원</a></li>
-            <li><a href="#">제조혁신전문대학원</a></li>
-            <li><a href="#">정보통신대학원</a></li>
-          </ul>
-        </div>
-        <div>
-          <span>주요 사이트</span>
-          <ul>
-            <li><a href="#">산학/연구 포털시스템</a></li>
-            <li><a href="#">표준분석연구원</a></li>
-            <li><a href="#">공학교육혁신센터</a></li>
-            <li><a href="#">교수학습개발센터</a></li>
-            <li><a href="#">교수회</a></li>
-            <li><a href="#">교육연수원</a></li>
-            <li><a href="#">교직과정</a></li>
-            <li><a href="#">인하MOOC센터</a></li>
-            <li><a href="#">국제처</a></li>
-            <li><a href="#">노동조합</a></li>
-            <li><a href="#">대학건강센터</a></li>
-            <li><a href="#">대학평의원회</a></li>
-            <li><a href="#">문화예술교육원</a></li>
-            <li><a href="#">미래인재개발원</a></li>
-            <li><a href="#">대학혁신지원사업단</a></li>
-            <li><a href="#">학생사회봉사단</a></li>
-            <li><a href="#">생활관</a></li>
-            <li><a href="#">정보통신처</a></li>
-            <li><a href="#">정석학술정보관</a></li>
-            <li><a href="#">정석물류통상연구원</a></li>
-            <li><a href="#">체육부</a></li>
-            <li><a href="#">학군단</a></li>
-            <li><a href="#">연구실안전관리시스템</a></li>
-            <li><a href="#">타슈켄트 인하대(IUT)</a></li>
-            <li><a href="#">평생교육원</a></li>
-            <li><a href="#">언어교육원</a></li>
-            <li><a href="#">상담센터</a></li>
-            <li><a href="#">인권센터</a></li>
-            <li><a href="#">과학영재교육센터</a></li>
-            <li><a href="#">Global U8 Consortium</a></li>
-            <li><a href="#">ACE+ 사업단</a></li>
-            <li><a href="#">발전기금</a></li>
-          </ul>
-        </div>
-        <div>
-          <span>주요 서비스</span>
-          <ul>
-            <li><a href="#">I-Class</a></li>
-            <li><a href="#">메일서비스(e-mail)</a></li>
-            <li><a href="#">수강신청(학부)</a></li>
-            <li><a href="#">공학인증</a></li>
-            <li><a href="#">인터넷증명발급</a></li>
-            <li><a href="#">인하졸업인증제</a></li>
-            <li><a href="#">현장실습</a></li>
-            <li><a href="#">청탁금지법</a></li>
-            <li><a href="#">교직원검색</a></li>
-            <li><a href="#">강의시간표</a></li>
-            <li><a href="#">식단안내</a></li>
-            <li><a href="#">정보공개</a></li>
-            <li><a href="#">인하대학신문</a></li>
-            <li><a href="#">무선인터넷 서비스</a></li>
-            <li><a href="#">Inha Summer School</a></li>
-            <li><a href="#">박물관</a></li>
-            <li><a href="#">일반수학교실</a></li>
-            <li><a href="#">정부학자금대출</a></li>
-            <li><a href="#">인하대병원</a></li>
-            <li><a href="#">Inha-Insight</a></li>
-            <li><a href="#">참교육 질관리 시스템</a></li>
-          </ul>
+        <!-- inha schedule buttons -->
+        <div class="schedule-buttons">
+          <a href="#" class="sch-fund">
+            <i class="icon-fund"></i>
+            <div class="sch-fund-text-box">
+              <span>INHA</span>
+              <h4>발전기금</h4>
+            </div>
+          </a>
+          <a href="#" class="sch-coop">
+            <i class="icon-coop"></i>
+            <div class="sch-coop-text-box">
+              <h4>산학협력단</h4>
+              <span>(산학/연구포털시스템)</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
-    <!-- footer bottom -->
-    <div class="footer-bottom">
-      <div class="inha-site">
-        <ul class="page-container">
-          <li><a href="#"><strong>개인정보처리방침</strong></a></li>
-          <li><a href="#">개인정보 목적외 이용ㆍ제공ㆍ파기대장</a></li>
-          <li><a href="#">이메일주소 무단수집 거부</a></li>
-          <li><a href="#">영상정보처리기기 관리방침</a></li>
-          <li><a href="#">대학통계연보</a></li>
-          <li><a href="#">예산결산공고</a></li>
-          <li><a href="#">대학정보공시</a></li>
-          <li><a href="#">대학자체평가</a></li>
-        </ul>
-      </div>
+    <!-- /inha-schedule -->
 
-      <div class="inha-info page-container">
-        <a href="#" class="f-logo"></a>
-        <div class="inha-info-box">
-          <address>
-            <span class="address">22212 인천광역시 미추홀구 인하로 100</span>
-            <dl class="contact">
-              <dt>대표전화&#58;</dt>
-              <dl> 032-860-7114, </dl>
-              <dt>팩스&#58;</dt>
-              <dl>032-863-1333, </dl>
-              <dt><strong>긴급전화(24시간)&#58;</strong></dt>
-              <dl><strong> 032-860-9119</strong></dl>
-            </dl>
-            <span class="copy">Copyright 2019. INHA UNIVERSITY All Rights Reserved.</span>
-          </address>
+    <!-- inha-news -->
+    <section id="research" class="inhanews">
+      <div class="page-container">
+        <!-- inhanews top -->
+        <div class="inhanews-top">
+          <!-- inhanews top hot -->
+          <div class="inhanews-hot">
+            <div class="inhanews-hot-img">
+              <img src="images/coop_img.jpg" alt="coop-img">
+              <div class="contents-links">
+                <a href="#" class="contents-links-facebook"></a>
+                <a href="#" class="contents-links-twitter"></a>
+                <a href="#" class="contents-links-link"></a>
+              </div>
+            </div>
+            <a class="textbox" href="#">
+              <h4>연구성과</h4>
+              <span class="textbox-tit">민경진 교수, 아로니아 항노화 효능 논문 저명학술지에 게재</span>
+              <p class="textbox-content">
+                아로니아베리, 항노화 효능 탁월 ▲ 민경진 생명과학과 교수 생명과학과 민경진 교수가 아로니아베리의 항노화 효능 관련 최신 선행연구 194건을 검토해 저술한 리뷰논문이 최근 저명학
+              </p>
+            </a>
+            <a href="#" class="button-read-more">Read More</a>
+          </div>
+          <!-- inhanews top newsletter -->
+          <div class="inhanews-newsletter">
+            <div class="inhanews-newsletter-left">
+              <img src="images/newletter.jpg" alt="">
+            </div>
+            <div class="inhanews-newsletter-right">
+              <h5>
+                산하협력단<br>
+                뉴스레터
+              </h5>
+              <ol>
+                <li>
+                  <a href="">2021년 7월호</a>
+                </li>
+                <li>
+                  <a href="">2021년 6월호</a>
+                </li>
+                <li>
+                  <a href="">2021년 5월호</a>
+                </li>
+                <li>
+                  <a href="">2021년 4월호</a>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- inhanews bottom -->
+        <div class="inhanews-bottom">
+          <!-- inhanews bottom coop -->
+          <div class="inhanews-coop">
+            <div class="inhanews-coop-tit">
+              <strong class="inhanews-coop-name">산학협력단 소식</strong>
+              <div class="inhanews-coop-controller">
+                <div class="swp-inhanews-coop-prev"></div>
+                <div class="swp-inhanews-coop-next"></div>
+              </div>
+            </div>
+            <div class="swiper-container swp-inhanews-coop">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="images/coop_n_1.jpg" alt="">
+                    <div class="textbox">
+                      <span class="textbox-tit">인하가족회사소개: 대동도어</span>
+                      <p class="textbox-content">인하가족회사소개 대동도어1979년 대기산업으로
+                        최초 설립. 2001.9.1. 대기오토모티브 사명변경 신설
+                        2003년 10월 기업 부설 연구소 최초 설립2014년 3월
+                        대동도어</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="images/coop_n_2.jpg" alt="">
+                    <div class="textbox">
+                      <span class="textbox-tit">표준분석연구원 연구장비 소개(BET)</span>
+                      <p class="textbox-content">표준분석연구원 연구장비 소개(BET)1. 장비명: 비표면적 분석기(BET)2. 도입 시기 : 2006년 05월3. 원리 및
+                        특징비표면적 및 기공분석 장치는 물리흡착 또는 화학흡착을</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="images/coop_n_3.jpg" alt="">
+                    <div class="textbox">
+                      <span class="textbox-tit">인하가족회사소개: 대동도어</span>
+                      <p class="textbox-content">인하가족회사소개 대동도어1979년 대기산업으로
+                        최초 설립. 2001.9.1. 대기오토모티브 사명변경 신설
+                        2003년 10월 기업 부설 연구소 최초 설립2014년 3월
+                        대동도어</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="images/coop_n_4.jpg" alt="">
+                    <div class="textbox">
+                      <span class="textbox-tit">표준분석연구원 연구장비 소개(BET)</span>
+                      <p class="textbox-content">표준분석연구원 연구장비 소개(BET)1. 장비명: 비표면적 분석기(BET)2. 도입 시기 : 2006년 05월3. 원리 및
+                        특징비표면적 및 기공분석 장치는 물리흡착 또는 화학흡착을</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- inhanews bottom patent -->
+          <a class="inhanews-patent" href="#">
+            <div class="textbox">
+              <i class="icon-patent"></i>
+              <strong>특허소식 - IT</strong>
+              <p>신규특허소식 2021년 7월호</p>
+            </div>
+            <div class="patent-img">
+              <img src="images/invent_1.jpg" alt="">
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- /inha-news -->
+
+    <!-- onestop -->
+    <section id="service" class="onestop">
+      <!-- onestop top -->
+      <div class="onestop-top">
+        <div class="page-container">
+          <ul>
+            <li>
+              <a href="#">
+                <i class="icon-onestop-main-1"></i>
+                <span>입학안내</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="icon-onestop-main-2"></i>
+                <span>취업안내</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="icon-onestop-main-3"></i>
+                <span>인하광장</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="icon-onestop-main-4"></i>
+                <span>국제처</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- onestop bottom -->
+      <div class="onestop-bottom">
+        <div class="onestop-bottom-contents">
+          <div class="page-container">
+            <div class="onestop-graduate-sch">
+              <a href="#" class="link-graduate-sch">
+                <div class="tit-box">
+                  <span>대학원 안내</span>
+                  <button class="button-more"></button>
+                </div>
+              </a>
+            </div>
+            <div class="onestop-right">
+              <span>One-Stop Services</span>
+              <ul class="onestop-buttons">
+                <li>
+                  <a href="#">
+                    <i class="icon-onestop-1"></i><span>인하포털시스템</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-onestop-2"></i><span>I-Class</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-onestop-3"></i><span>전화번호안내(긴급)</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-onestop-4"></i><span>학생통학버스</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-onestop-5"></i><span>정석학술정보관</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-onestop-6"></i><span>기부현황</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-onestop-7"></i><span>수강신청(학부)</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-onestop-8"></i><span>오시는 길</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-onestop-9"></i><span>2021-2 교수초빙</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-onestop-10"></i><span>재학생 등록안내</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-onestop-11"></i><span>온&#183;오프 증명서 발급안내</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-onestop-12"></i><span>인터넷증명발급</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /onestop -->
+
+    <!-- inha-SNS -->
+    <section id="sns" class="sns">
+      <div class="page-container">
+        <div class="sns-tit">
+          <span>
+            INHA <b>SNS</b>
+          </span>
           <div class="sns-box">
             <span class="sns-f"></span>
             <span class="sns-b"></span>
@@ -908,11 +1187,194 @@
             <span class="sns-i"></span>
           </div>
         </div>
-      </div>
-    </div>
-  </footer>
-  <!-- /footer -->
-</div>
-</body>
-</html>
 
+        <div class="sns-content">
+          <ol>
+            <li>
+              <a href="#" class="sns-c">
+                <img src="images/sns_1.jpg" alt="sns-1">
+                <div class="style-p">
+                  <span class="tit">학교 홍보 웹툰 <온보사> 13화</span>
+                  <span class="date">2021.08.23.</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sns-c">
+                <img src="images/sns_2.jpg" alt="sns-2">
+                <div class="style-p">
+                  <span class="tit">인하 라이프 아카데미 4기 모집</span>
+                  <span class="date">2021.08.17.</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sns-c">
+                <img src="images/sns_3.jpg" alt="sns-3">
+                <div class="style-p">
+                  <span class="tit">2021-2 수업 방식 안내</span>
+                  <span class="date">2021.08.23.</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="sns-c">
+                <img src="images/sns_4.jpg" alt="sns-4">
+                <div class="style-p">
+                  <span class="tit">단편영화 Teaser - <비밀을 아는건 우리뿐></span>
+                  <span class="date">2021.08.17.</span>
+                </div>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- /inha-SNS -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <!-- footer sitemap -->
+      <section class="site-map">
+        <em class="button-site-map">
+          <b>LINK</b>주요 사이트 및 서비스 바로가기<i class="icon-angle-down"></i>
+        </em>
+        <div class="page-container">
+          <div>
+            <span>대학/대학원</span>
+            <ul>
+              <li><a href="#">프런티어 학부대학</a></li>
+              <li><a href="#">공과대학</a></li>
+              <li><a href="#">자연과학대학</a></li>
+              <li><a href="#">경영대학</a></li>
+              <li><a href="#">사범대학</a></li>
+              <li><a href="#">사회과학대학</a></li>
+              <li><a href="#">문과대학</a></li>
+              <li><a href="#">의과대학</a></li>
+              <li><a href="#">미래융합대학</a></li>
+              <li><a href="#">예술체육학부</a></li>
+              <li><a href="#">국제학부</a></li>
+              <li><a href="#">첨단SW융합학부</a></li>
+              <li><a href="#">일반대학원</a></li>
+              <li><a href="#">공학대학원</a></li>
+              <li><a href="#">경영대학원</a></li>
+              <li><a href="#">교육대학원</a></li>
+              <li><a href="#">정책대학원</a></li>
+              <li><a href="#">상담심리대학원</a></li>
+              <li><a href="#">보건대학원</a></li>
+              <li><a href="#">법학전문대학원</a></li>
+              <li><a href="#">물류전문대학원</a></li>
+              <li><a href="#">제조혁신전문대학원</a></li>
+              <li><a href="#">정보통신대학원</a></li>
+            </ul>
+          </div>
+          <div>
+            <span>주요 사이트</span>
+            <ul>
+              <li><a href="#">산학/연구 포털시스템</a></li>
+              <li><a href="#">표준분석연구원</a></li>
+              <li><a href="#">공학교육혁신센터</a></li>
+              <li><a href="#">교수학습개발센터</a></li>
+              <li><a href="#">교수회</a></li>
+              <li><a href="#">교육연수원</a></li>
+              <li><a href="#">교직과정</a></li>
+              <li><a href="#">인하MOOC센터</a></li>
+              <li><a href="#">국제처</a></li>
+              <li><a href="#">노동조합</a></li>
+              <li><a href="#">대학건강센터</a></li>
+              <li><a href="#">대학평의원회</a></li>
+              <li><a href="#">문화예술교육원</a></li>
+              <li><a href="#">미래인재개발원</a></li>
+              <li><a href="#">대학혁신지원사업단</a></li>
+              <li><a href="#">학생사회봉사단</a></li>
+              <li><a href="#">생활관</a></li>
+              <li><a href="#">정보통신처</a></li>
+              <li><a href="#">정석학술정보관</a></li>
+              <li><a href="#">정석물류통상연구원</a></li>
+              <li><a href="#">체육부</a></li>
+              <li><a href="#">학군단</a></li>
+              <li><a href="#">연구실안전관리시스템</a></li>
+              <li><a href="#">타슈켄트 인하대(IUT)</a></li>
+              <li><a href="#">평생교육원</a></li>
+              <li><a href="#">언어교육원</a></li>
+              <li><a href="#">상담센터</a></li>
+              <li><a href="#">인권센터</a></li>
+              <li><a href="#">과학영재교육센터</a></li>
+              <li><a href="#">Global U8 Consortium</a></li>
+              <li><a href="#">ACE+ 사업단</a></li>
+              <li><a href="#">발전기금</a></li>
+            </ul>
+          </div>
+          <div>
+            <span>주요 서비스</span>
+            <ul>
+              <li><a href="#">I-Class</a></li>
+              <li><a href="#">메일서비스(e-mail)</a></li>
+              <li><a href="#">수강신청(학부)</a></li>
+              <li><a href="#">공학인증</a></li>
+              <li><a href="#">인터넷증명발급</a></li>
+              <li><a href="#">인하졸업인증제</a></li>
+              <li><a href="#">현장실습</a></li>
+              <li><a href="#">청탁금지법</a></li>
+              <li><a href="#">교직원검색</a></li>
+              <li><a href="#">강의시간표</a></li>
+              <li><a href="#">식단안내</a></li>
+              <li><a href="#">정보공개</a></li>
+              <li><a href="#">인하대학신문</a></li>
+              <li><a href="#">무선인터넷 서비스</a></li>
+              <li><a href="#">Inha Summer School</a></li>
+              <li><a href="#">박물관</a></li>
+              <li><a href="#">일반수학교실</a></li>
+              <li><a href="#">정부학자금대출</a></li>
+              <li><a href="#">인하대병원</a></li>
+              <li><a href="#">Inha-Insight</a></li>
+              <li><a href="#">참교육 질관리 시스템</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- footer bottom -->
+      <div class="footer-bottom">
+        <div class="inha-site">
+          <ul class="page-container">
+            <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+            <li><a href="#">개인정보 목적외 이용ㆍ제공ㆍ파기대장</a></li>
+            <li><a href="#">이메일주소 무단수집 거부</a></li>
+            <li><a href="#">영상정보처리기기 관리방침</a></li>
+            <li><a href="#">대학통계연보</a></li>
+            <li><a href="#">예산결산공고</a></li>
+            <li><a href="#">대학정보공시</a></li>
+            <li><a href="#">대학자체평가</a></li>
+          </ul>
+        </div>
+
+        <div class="inha-info page-container">
+          <a href="#" class="f-logo"></a>
+          <div class="inha-info-box">
+            <address>
+              <span class="address">22212 인천광역시 미추홀구 인하로 100</span>
+              <dl class="contact">
+                <dt>대표전화&#58;</dt>
+                <dl> 032-860-7114, </dl>
+                <dt>팩스&#58;</dt>
+                <dl>032-863-1333, </dl>
+                <dt><strong>긴급전화(24시간)&#58;</strong></dt>
+                <dl><strong> 032-860-9119</strong></dl>
+              </dl>
+              <span class="copy">Copyright 2019. INHA UNIVERSITY All Rights Reserved.</span>
+            </address>
+            <div class="sns-box">
+              <span class="sns-f"></span>
+              <span class="sns-b"></span>
+              <span class="sns-y"></span>
+              <span class="sns-i"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /footer -->
+  </div>
+</body>
+
+</html>
