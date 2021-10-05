@@ -464,13 +464,35 @@ body{
 }
 /* header-bottom */
 .header-bottom{
-  background: white;
+  width: 100%;
   box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.05);
+  z-index: 99;
 }
-.header-bottom > .page-container{
+@keyframes slide-down {
+  from{
+    top: -100%;
+  }to{
+    top: 0;
+  }
+}
+.header-bottom-down{
+  position: fixed;
+  top: 0;
+  animation-name: slide-down;
+  animation-duration: .9s;
+}
+.header-bottom-gnb{
+  background: white;
+}
+.header-bottom-gnb > .page-container{
   display: flex;
   justify-content: space-between;
   height: 60px;
+}
+.header-bottom-gnb > .page-container::after{
+  content: '';
+  position: absolute;
+  
 }
 .header-bottom .h-logo{
   display: block;
@@ -557,6 +579,10 @@ body{
   backdrop-filter: brightness(60%);
   z-index: 9999;
   display: none;
+}
+.header-bottom-depth2-area-down{
+  position: fixed;
+  top: 6rem;
 }
 .header-bottom-depth2{
   position: relative;
@@ -764,6 +790,20 @@ body{
 .depth2-user-menu > .page-container{
   display: flex;
   background: white;
+}
+.user-menu-close{
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2.2rem;
+  font-weight: 100;
+  border: 1px solid rgba(0, 0, 0, .3);
+}
+.user-menu-close:hover{
+  border: 1px solid rgba(75, 188, 195, 1);
 }
 .user-menu-buttons{
   width: 20rem;
@@ -2294,4 +2334,16 @@ address{
 .inha-info-box .sns-box > span:hover{
   border: .5px solid rgba(255, 255, 255, .8);
   transition: border .3s;
+}
+
+@media screen and (max-width:1700px) {
+  .page-remote{
+    top: 30%;
+    right: 1rem;
+    opacity: .5;
+  }
+  .page-remote:hover{
+    opacity: 1;
+    transition: opacity .3s;
+  }
 }

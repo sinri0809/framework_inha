@@ -68,15 +68,25 @@ window.onload = function () {
       $(this).addClass('page-remote-active');
     });
   });
-  // 이거는 진짜... wheel 이벤트 쓰던지.. 
+  // 이거는 진짜... wheel 이벤트 쓰던지..
+  let header_bottom = $('.header-bottom');
+  let depth2_area = $('.header-bottom-depth2-area');
+
   window.addEventListener('scroll', function (e) {
     let location_y = window.scrollY;
+
     if (location_y < fix_menu_lst[1]) {
       remote_button.removeClass('page-remote-active');
       remote_button.eq(0).addClass('page-remote-active');
+      header_bottom.removeClass('header-bottom-down');
+      depth2_area.removeClass('header-bottom-depth2-area-down');
+
     }else if (location_y >= fix_menu_lst[1] && location_y < fix_menu_lst[2]) {
       remote_button.removeClass('page-remote-active');
       remote_button.eq(1).addClass('page-remote-active');
+      header_bottom.addClass('header-bottom-down');
+      depth2_area.addClass('header-bottom-depth2-area-down');
+
     } else if (location_y >= fix_menu_lst[2] && location_y < fix_menu_lst[3]) {
       remote_button.removeClass('page-remote-active');
       remote_button.eq(2).addClass('page-remote-active');
@@ -113,8 +123,9 @@ window.onload = function () {
     }
   });
 
+
+
   // header navigation
-  let depth2_area = $('.header-bottom-depth2-area');
   let depth2_lst = $('.depth2');
   let depth1_button = $('.depth1').find('li');
   let user_menu = $('.user-menu');
@@ -139,11 +150,16 @@ window.onload = function () {
   });
 
   // depth2 user-menu
-  let user_menu_button = $('.user-menu');
   let user_menu_list = $('.user-menu-contents').find('ul');
   let user_menu_list_button = $('.user-menu-buttons').find('li > a');
+  let user_menu_close = $('.user-menu-close');
+  
+  user_menu_close.click(function () {
+    $('.depth2-user-menu').slideUp();
+    user_menu.removeClass('user-menu-active');
+  })
 
-  user_menu_button.click(function (e) {
+  user_menu.click(function (e) {
     e.preventDefault();
     $('.depth2-user-menu').slideToggle();
     $(this).toggleClass('user-menu-active');
